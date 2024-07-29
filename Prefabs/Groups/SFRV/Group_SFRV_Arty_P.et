@@ -1,0 +1,9 @@
+SCR_AIGroup : "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et" {
+ ID "0000000000000001"
+ m_faction "US"
+ m_aUnitPrefabSlots {
+  "{B6AEDFD882D71D47}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Leader_BatteryCommander_P.et" "{77E27963A6052258}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_BatteryGunner_P.et" "{77E27963A6052258}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_BatteryGunner_P.et"
+ }
+ m_sCustomNameSet "Artillery"
+ m_bSetPlayable 1
+}

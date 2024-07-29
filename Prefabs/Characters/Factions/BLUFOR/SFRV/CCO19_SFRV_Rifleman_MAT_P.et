@@ -2,7 +2,10 @@ SCR_ChimeraCharacter : "{3B5BDB7A523E4810}Prefabs/Characters/Factions/BLUFOR/SFR
  ID "52092032B0E62200"
  components {
   PS_PlayableComponent "{5EFCC1946F475F15}" {
-   m_name "Rifleman (Demo)"
+   m_name "MAT Gunner"
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFB7}" {
+   WeaponTemplate "{A6ACF0C81DCC2390}Prefabs/Weapons/Launchers/M67/Launcher_M67.et"
   }
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
@@ -13,11 +16,15 @@ SCR_ChimeraCharacter : "{3B5BDB7A523E4810}Prefabs/Characters/Factions/BLUFOR/SFR
   }
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
-    ItemsInitConfigurationItem "{61FB4387AFE7F278}" {
+    ItemsInitConfigurationItem "{5538C040737C0BE0}" {
+    }
+    ItemsInitConfigurationItem "{61FB5782C37FA4FB}" {
      TargetStorage "Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et"
      PrefabsToSpawn {
-      "{D9B1F65D20081DEF}PrefabsEditable/Explosives/E_DemoBlock_M112.et" "{D9B1F65D20081DEF}PrefabsEditable/Explosives/E_DemoBlock_M112.et" "{D9B1F65D20081DEF}PrefabsEditable/Explosives/E_DemoBlock_M112.et" "{CE0AF733722B3978}Prefabs/Items/Equipment/Detonators/BlastingMachine_M34/BlastingMachine_M34.et"
+      "{4D44C563104F77BB}Prefabs/Weapons/Ammo/Ammo_Rocket_M37A1.et" "{5971423B21CB6C16}Prefabs/Weapons/Ammo/Ammo_Rocket_M590E1_Flechette_50_500.et"
      }
+    }
+    ItemsInitConfigurationItem "{61FB5782C092B1B8}" {
     }
    }
   }

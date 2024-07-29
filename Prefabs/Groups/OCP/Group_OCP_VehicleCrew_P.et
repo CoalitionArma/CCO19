@@ -1,0 +1,8 @@
+SCR_AIGroup : "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et" {
+ ID "0000000000000001"
+ m_aUnitPrefabSlots {
+  "{7E59682AD03EBA74}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Rifleman_VehCommander_P.et" "{7C32FA394431E227}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Rifleman_VehDriver_P.et"
+ }
+ m_sCustomNameSet "Armor Team"
+ m_bSetPlayable 1
+}
