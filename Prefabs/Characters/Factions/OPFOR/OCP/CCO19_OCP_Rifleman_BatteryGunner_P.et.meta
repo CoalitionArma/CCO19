@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{0AA23365063F3427}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Rifleman_BatteryGunner_P.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

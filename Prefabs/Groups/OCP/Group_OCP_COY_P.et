@@ -1,0 +1,7 @@
+SCR_AIGroup : "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et" {
+ ID "0000000000000001"
+ m_aUnitPrefabSlots {
+  "{353674C5EC317024}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Leader_COY_P.et" "{CBE229F5618CF3C9}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Leader_SSGT_P.et" "{E79AD08776BA0E15}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Rifleman_MO_P.et"
+ }
+ m_sCustomNameSet "Company"
+}

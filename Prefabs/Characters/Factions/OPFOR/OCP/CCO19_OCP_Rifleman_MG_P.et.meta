@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{C9FAA83EEC2DFADF}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Rifleman_MG_P.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}
