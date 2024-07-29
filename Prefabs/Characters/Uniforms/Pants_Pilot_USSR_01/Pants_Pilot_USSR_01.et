@@ -1,0 +1,9 @@
+GameEntity : "{D7CC1AF40F7A5A32}Prefabs/Characters/Uniforms/Pants_Pilot_USSR_01/Pants_Pilot_USSR_01_base.et" {
+ ID "5104869D194C6243"
+ components {
+  SCR_UniversalInventoryStorageComponent "{5222CB01D5B9A306}" {
+   MaxCumulativeVolume 2400
+   m_fMaxWeight 20
+  }
+ }
+}

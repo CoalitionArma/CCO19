@@ -1,0 +1,9 @@
+GameEntity : "{2C65F4899E862CF8}Prefabs/Characters/Uniforms/Jacket_Pilot_USSR_01/Jacket_Pilot_USSR_01_base.et" {
+ ID "5104869D194C6243"
+ components {
+  SCR_UniversalInventoryStorageComponent "{5222CB01D5B9A306}" {
+   MaxCumulativeVolume 1200
+   m_fMaxWeight 10
+  }
+ }
+}
