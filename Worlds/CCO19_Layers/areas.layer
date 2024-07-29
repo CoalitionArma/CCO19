@@ -1,0 +1,47 @@
+$grp SCR_FactionControlTriggerEntity {
+ bZone {
+  coords 13857.392 56.675 9045.648
+  angleX -0.448
+  angleY 0.004
+  angleZ -0.448
+  TriggerShapeType Sphere
+  SphereRadius 200
+  DrawShape 1
+ }
+ aZone {
+  coords 15592.809 49.968 7476.871
+  angleX -0.448
+  angleY 0.004
+  angleZ -0.448
+  TriggerShapeType Sphere
+  SphereRadius 200
+  DrawShape 1
+ }
+ cZone {
+  coords 12198.682 52.631 9757.188
+  angleX -0.448
+  angleY 0.004
+  angleZ -0.448
+  TriggerShapeType Sphere
+  SphereRadius 100
+  DrawShape 1
+ }
+ dZone {
+  coords 11740.869 42.688 11847.71
+  angleX -0.448
+  angleY 0.004
+  angleZ -0.448
+  TriggerShapeType Sphere
+  SphereRadius 200
+  DrawShape 1
+ }
+ eZone {
+  coords 10535.569 73.544 13793.385
+  angleX -0.448
+  angleY 0.004
+  angleZ -0.448
+  TriggerShapeType Sphere
+  SphereRadius 200
+  DrawShape 1
+ }
+}
