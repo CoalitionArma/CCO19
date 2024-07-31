@@ -7,7 +7,7 @@ TracerProjectile : "{A4E070505C87AD42}Prefabs/Weapons/Ammo/Ammo_127x99_Ball_M33.
     ProjectileDamage "{5168BBF3DBD79134}" {
      DamageType Fragmentation
      DamageEffects {
-      SCR_ExplosionDamageEffect "{611E7405A19DBF5F}" {
+      SCR_FragmentationDamageEffect "{611E7405A19DBF5F}" {
       }
      }
     }
