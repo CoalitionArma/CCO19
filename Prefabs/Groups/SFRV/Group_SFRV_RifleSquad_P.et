@@ -1,0 +1,9 @@
+SCR_AIGroup : "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et" {
+ ID "0000000000000001"
+ m_faction "US"
+ m_aUnitPrefabSlots {
+  "{2946C9CC4AAC01A2}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Leader_Base_SL_P.et" "{227B26E0BF7CD3F5}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_Medic_P.et" "{B4CE670379CB41D5}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Leader_TL_P.et" "{700DF359EE3CB245}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_AR_P.et" "{48CB0765E07F99FB}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_AAR_P.et" "{3B5BDB7A523E4810}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_Base_P.et" "{B4CE670379CB41D5}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Leader_TL_P.et" "{CDDDA1DE9127AE5B}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_AT_P.et" "{CDDDA1DE9127AE5B}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_AT_P.et" "{E4F5198E83EAADFA}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_Demo_P.et"
+ }
+ m_sCustomNameSet "1st Squad"
+ m_bSetPlayable 1
+}

@@ -1,0 +1,7 @@
+SCR_AIGroup : "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et" {
+ ID "0000000000000001"
+ m_aUnitPrefabSlots {
+  "{639CE0808D6CB057}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Leader_PL_P.et" "{C5FC6DBD5C7BFC13}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Leader_PSGT_P.et" "{8FA2CA481963DCF7}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Leader_FO_P.et"
+ }
+ m_sCustomNameSet "1st Platoon"
+}

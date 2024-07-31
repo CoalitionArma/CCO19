@@ -1,0 +1,9 @@
+SCR_AIGroup : "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et" {
+ ID "0000000000000001"
+ m_faction "US"
+ m_aUnitPrefabSlots {
+  "{064FA95C04B3373F}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Leader_LogiLead_P.et" "{F5838A4A846944E4}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_LogiRunner_P.et" "{F5838A4A846944E4}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_LogiRunner_P.et" "{F5838A4A846944E4}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_LogiRunner_P.et"
+ }
+ m_sCustomNameSet "Logistics"
+ m_bSetPlayable 1
+}

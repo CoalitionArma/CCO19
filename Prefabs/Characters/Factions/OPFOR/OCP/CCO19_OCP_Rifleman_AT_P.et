@@ -1,0 +1,28 @@
+SCR_ChimeraCharacter : "{DFD7E6F06242E5B0}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Rifleman_Base_P.et" {
+ ID "200D264F0EEA1A28"
+ components {
+  PS_PlayableComponent "{5EFCC1946F475F15}" {
+   m_name "Grenadier (RPG-7)"
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFB7}" {
+   WeaponTemplate "{7A82FE978603F137}Prefabs/Weapons/Launchers/RPG7/Launcher_RPG7.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Back {
+     PivotID ""
+     Prefab "{0D39750E5695B9D8}Prefabs/Items/Equipment/Backpacks/Backpack_RPG_Gunner.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{61FB1EA26672452C}" {
+     PrefabsToSpawn {
+      "{32E12D322E107F1C}Prefabs/Weapons/Ammo/Ammo_Rocket_PG7VM.et" "{32E12D322E107F1C}Prefabs/Weapons/Ammo/Ammo_Rocket_PG7VM.et"
+     }
+    }
+   }
+  }
+ }
+}

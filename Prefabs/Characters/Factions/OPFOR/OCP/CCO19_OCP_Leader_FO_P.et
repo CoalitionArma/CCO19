@@ -1,0 +1,8 @@
+SCR_ChimeraCharacter : "{81356AD96FDBEEAF}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Leader_Base_SL_P.et" {
+ ID "200D264F0EEA1A28"
+ components {
+  PS_PlayableComponent "{5EFCC1946F475F15}" {
+   m_name "Forward Observer"
+  }
+ }
+}

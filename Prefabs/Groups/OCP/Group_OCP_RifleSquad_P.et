@@ -1,0 +1,8 @@
+SCR_AIGroup : "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et" {
+ ID "0000000000000001"
+ m_aUnitPrefabSlots {
+  "{81356AD96FDBEEAF}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Leader_Base_SL_P.et" "{8A0885F59A0B3CF8}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Rifleman_Medic_P.et" "{BBBF80CBA20BE7D2}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Leader_TL_P.et" "{C9FAA83EEC2DFADF}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Rifleman_MG_P.et" "{9CAA0AABF3598797}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Rifleman_MGA_P.et" "{BBBF80CBA20BE7D2}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Leader_TL_P.et" "{E1473138BECC5358}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Rifleman_AT_P.et" "{7F2F318C2FB6D2F7}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Rifleman_ATA_P.et" "{DFD7E6F06242E5B0}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Rifleman_Base_P.et" "{DFD7E6F06242E5B0}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Rifleman_Base_P.et"
+ }
+ m_sCustomNameSet "1st Squad"
+ m_bSetPlayable 1
+}

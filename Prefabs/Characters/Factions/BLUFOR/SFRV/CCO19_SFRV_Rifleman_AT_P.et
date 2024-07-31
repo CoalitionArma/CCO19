@@ -1,0 +1,17 @@
+SCR_ChimeraCharacter : "{3B5BDB7A523E4810}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_Base_P.et" {
+ ID "52092032B0E62200"
+ components {
+  PS_PlayableComponent "{5EFCC1946F475F15}" {
+   m_name "Rifleman (AT)"
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFB7}" {
+   WeaponTemplate "{9C5C20FB0E01E64F}Prefabs/Weapons/Launchers/M72/Launcher_M72A3.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Back {
+    }
+   }
+  }
+ }
+}

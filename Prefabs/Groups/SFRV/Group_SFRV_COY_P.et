@@ -1,0 +1,9 @@
+SCR_AIGroup : "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et" {
+ ID "0000000000000001"
+ m_faction "US"
+ m_aUnitPrefabSlots {
+  "{589534EDC46E19F0}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Leader_COY_P.et" "{AA0649B5BD51B5C4}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Leader_FSGT_P.et" "{CB0040615951F316}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_MO_P.et"
+ }
+ m_sCustomNameSet "Company"
+ m_bSetPlayable 1
+}

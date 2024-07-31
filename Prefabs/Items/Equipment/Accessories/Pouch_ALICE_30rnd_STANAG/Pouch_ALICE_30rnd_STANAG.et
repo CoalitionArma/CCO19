@@ -1,0 +1,9 @@
+GenericEntity : "{0B0D67BC8F43A052}Prefabs/Items/Equipment/Accessories/Pouch_ALICE_30rnd_STANAG/Pouch_ALICE_30rnd_STANAG_base.et" {
+ ID "5184C9E8F822439D"
+ components {
+  SCR_UniversalInventoryStorageComponent "{52A09474497068A0}" {
+   MaxCumulativeVolume 1600
+   m_fMaxWeight 10
+  }
+ }
+}

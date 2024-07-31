@@ -1,0 +1,36 @@
+SCR_ChimeraCharacter : "{3B5BDB7A523E4810}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_Base_P.et" {
+ ID "52092032B0E62200"
+ components {
+  SCR_CharacterInventoryStorageComponent "{520EA1D2DB118DAC}" {
+   components {
+    SCR_EquipmentStorageComponent "{56B49DA9722B635D}" {
+     InitialStorageSlots {
+      SCR_EquipmentStorageSlot BinocularSlot {
+       Prefab "{F2539FA5706E51E4}Prefabs/Items/Equipment/Binoculars/Binoculars_B12/Binoculars_B12.et"
+      }
+     }
+    }
+   }
+  }
+  PS_PlayableComponent "{5EFCC1946F475F15}" {
+   m_name "MAT Assistant Gunner"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Back {
+     Prefab "{41A9C55B61F375F0}Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{61FB5782FAEBD089}" {
+     TargetStorage "Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et"
+     PrefabsToSpawn {
+      "{4D44C563104F77BB}Prefabs/Weapons/Ammo/Ammo_Rocket_M37A1.et" "{4D44C563104F77BB}Prefabs/Weapons/Ammo/Ammo_Rocket_M37A1.et" "{5971423B21CB6C16}Prefabs/Weapons/Ammo/Ammo_Rocket_M590E1_Flechette_50_500.et"
+     }
+    }
+   }
+  }
+ }
+}

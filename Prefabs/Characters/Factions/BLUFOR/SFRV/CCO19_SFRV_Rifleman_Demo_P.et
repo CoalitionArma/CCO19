@@ -1,0 +1,25 @@
+SCR_ChimeraCharacter : "{3B5BDB7A523E4810}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_Base_P.et" {
+ ID "52092032B0E62200"
+ components {
+  PS_PlayableComponent "{5EFCC1946F475F15}" {
+   m_name "Rifleman (Demo)"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Back {
+     Prefab "{41A9C55B61F375F0}Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{61FB4387AFE7F278}" {
+     TargetStorage "Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et"
+     PrefabsToSpawn {
+      "{D9B1F65D20081DEF}PrefabsEditable/Explosives/E_DemoBlock_M112.et" "{D9B1F65D20081DEF}PrefabsEditable/Explosives/E_DemoBlock_M112.et" "{D9B1F65D20081DEF}PrefabsEditable/Explosives/E_DemoBlock_M112.et" "{CE0AF733722B3978}Prefabs/Items/Equipment/Detonators/BlastingMachine_M34/BlastingMachine_M34.et"
+     }
+    }
+   }
+  }
+ }
+}
