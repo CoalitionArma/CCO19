@@ -25,7 +25,16 @@ SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
  coords 12281.797 32 8831.771
 }
 PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ components {
+  CRF_SafestartGameModeComponent "{61FD260E8973CC41}" {
+   m_iTimeLimitMinutes 180
+   m_bDeleteJIPSlots 0
+  }
+ }
  coords 12286.162 32 8836.881
+ m_iReconnectTime -1
+ m_bRemoveSquadMarkers 1
+ m_iFreezeTime 0
 }
 SCR_AIGroup : "{47EADE5E4E07076C}Prefabs/Groups/BLUFOR/Group_US_FireTeam_P.et" {
  coords 12288.09 32 8831.744
