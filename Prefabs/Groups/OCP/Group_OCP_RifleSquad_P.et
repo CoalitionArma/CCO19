@@ -5,4 +5,10 @@ SCR_AIGroup : "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et" 
  }
  m_sCustomNameSet "1st Squad"
  m_bSetPlayable 1
+ m_aUnitPrefabColorTeams {
+  "None" "None" "Red" "Red" "Red" "Green" "Green" "Green" "Green" "Green"
+ }
+ m_aUnitPrefabOverrideIcons {
+  "None" "None" "Team Lead" "None" "None" "Team Lead" "None" "None" "None" "None"
+ }
 }

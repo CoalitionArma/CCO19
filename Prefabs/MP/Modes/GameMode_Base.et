@@ -1,7 +1,11 @@
 SCR_BaseGameMode {
  ID "56B2B479C6B96951"
  components {
+  CRF_LoggingServerComponent "{62051828F3A45E77}" {
+  }
   CRF_SafestartGameModeComponent "{61FD260E8973CC41}" {
+   m_iTimeLimitMinutes 180
+   m_bDeleteJIPSlots 0
   }
  }
 }
