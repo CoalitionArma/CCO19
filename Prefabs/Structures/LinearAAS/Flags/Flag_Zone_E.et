@@ -1,14 +1,13 @@
-GenericEntity : "{AE09DA7896F9DB37}Prefabs/Props/Fabric/Flags/Flag_1_2.et" {
+GenericEntity : "{CCCC185722D6D6EC}Assets/Props/Fabric/Flags/Flag_1_2_White_Base.et" {
  ID "50E2C85E7DD38DD0"
  components {
   MeshObject "{52AE82368499B365}" {
    Materials {
-    MaterialAssignClass "{62082A2185F08A49}" {
+    MaterialAssignClass "{599EE14F37D870CE}" {
      SourceMaterial "Flag_1_2"
-     AssignedMaterial "{0616F7E42385E938}Prefabs/Structures/LinearAAS/Flags/Zone_E_Mat.emat"
+     AssignedMaterial "{D7F3DA99D8543DF0}Prefabs/Structures/LinearAAS/Flags/Zone_E_mat.emat"
     }
    }
   }
  }
- coords 0 0.464 0
 }

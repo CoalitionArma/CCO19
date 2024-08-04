@@ -1,11 +1,3 @@
-MatPBRBasic {
- Emissive 0.002 0.002 0.002 0.031
- Cull none
- BlendMode None
- CavityFromAO 0
- BCRMap "{54FF68B0B8C6A396}Images/UI/Objectives/Flags/D.edds"
- NormalPower 1.2
- NMOMap "{C39D234EF0D4B94D}Assets/Props/Fabric/Flags/Data/Flag_1_2_N.edds"
- DetailNormalPower 0.35
- DetailNormalMap "{61DE3875B9DBD343}Assets/_SharedData/Fabric/ST_FabricWrinkles_1m_01_NMO.edds"
+MatPBRBasic : "{91E0C16C079A6D05}Assets/Props/Fabric/Flags/Data/Flag_1_2_emat_base.emat" {
+ BCRMap "{8478C7ACD5DABDDA}Prefabs/Structures/LinearAAS/Flags/Flag_Zone_D_texture.edds"
 }

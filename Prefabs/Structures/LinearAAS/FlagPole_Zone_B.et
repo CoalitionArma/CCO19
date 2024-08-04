@@ -1,35 +1,14 @@
-GenericEntity : "{8364151EF33B3B33}Prefabs/Structures/Core/FlagPole_Base.et" {
+GenericEntity : "{E4A20C9CE20EEC0B}Prefabs/Structures/LinearAAS/FlagPole_Zone_Base.et" {
  ID "50C6D20663830070"
  components {
-  MeshObject "{62082A216DE1BB99}" {
-   Object "{E9A0740046C9DFA1}Assets/Structures/Military/Flags/FlagPole_02/FlagPole_02.xob"
+  SCR_FlagComponent "{5E3C95A1E1EE9681}" {
+   m_sDefaultMaterial "{A813D897413F5532}Prefabs/Structures/LinearAAS/Flags/Zone_B_mat.emat"
   }
-  RigidBody "{62082A216DE1BB8C}" {
-   ResponseIndex "TinyDestructible"
-   ModelGeometry 1
-   Static 1
-  }
-  SCR_DestructionMultiPhaseComponent "{51BACBF3C4A56479}" : "{76DA308CC9E2AB84}Prefabs/Props/Core/DestructionMultiPhase_Base.ct" {
-   m_fBaseHealth 1000
-   m_DestroySpawnObjects {
-    SCR_DebrisSpawnable "{62082A216DE1BBF4}" {
-     m_ModelPrefabs {
-      "{180F19ED1440D32A}Assets/Structures/Military/Flags/FlagPole_01/dst/Flagpole_01_dst.xob"
-     }
-     m_fMass 50
-     m_eMaterialSoundType METAL_POLE
-    }
-   }
-   m_eMaterialSoundType BREAK_METAL_POLE
-  }
-  SCR_FlagComponent "{62082A216DE1BBF2}" {
-   m_sDefaultMaterial "{4FCEE2FB51439D52}Prefabs/Structures/LinearAAS/Flags/Zone_B_Mat.emat"
-  }
-  SlotManagerComponent "{62082A216DE1BBFC}" {
+  SlotManagerComponent "{55DAE04E55ECE7FA}" {
    Slots {
     EntitySlotInfo Flag {
-     Offset 0 4.396 -0.0832
-     Prefab "{BD6DBDEE4467944A}Prefabs/Structures/LinearAAS/Flags/Flag_Zone_B.et"
+     Enabled 1
+     Prefab "{D8035CF5E1709BDC}Prefabs/Structures/LinearAAS/Flags/Flag_Zone_B.et"
     }
    }
   }
