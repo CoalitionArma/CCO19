@@ -1,0 +1,12 @@
+Tank : "{11CD943152DBC95C}T-55/T55ZDF.et" {
+ ID "BBCBA43A9778AE21"
+ components {
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo Turret {
+     Prefab "{631A917C2741D1CF}T-55/T55_SFRV_Turretzdf.et"
+    }
+   }
+  }
+ }
+}

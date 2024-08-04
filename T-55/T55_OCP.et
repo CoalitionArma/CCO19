@@ -1,0 +1,12 @@
+Tank : "{6484A98F55C6AA9E}T-55/T55olive.et" {
+ ID "BBCBA43A9778AE21"
+ components {
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo Turret {
+     Prefab "{34E892954DAFD954}T-55/T55_OCP_Turretolive.et"
+    }
+   }
+  }
+ }
+}

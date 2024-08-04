@@ -1,0 +1,13 @@
+Turret : "{29F15664CB4A6937}T-55/T55Turretolive.et" {
+ ID "51ACD0965653D003"
+ components {
+  MeshObject "{51ACD09C4E0B7D16}" {
+   Materials {
+    MaterialAssignClass "{61DEC0DFDA3011A6}" {
+     SourceMaterial "t55_tower"
+     AssignedMaterial "{8C5186C166B7D465}T-55/Data/t55_OCP_tower_olive.emat"
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,14 @@
+Turret : "{173BB621B9303F22}T-55/T55Turretzdf.et" {
+ ID "51ACD0965653D003"
+ components {
+  MeshObject "{51ACD09C4E0B7D16}" {
+   Materials {
+    MaterialAssignClass "{61DCD0819A8D9632}" {
+     SourceMaterial "t55_tower"
+     AssignedMaterial "{DAF1ED3F1DD2036D}T-55/Data/t55_SFRV_towerzdf.emat"
+    }
+   }
+  }
+ }
+ coords 0 0 0.004
+}
