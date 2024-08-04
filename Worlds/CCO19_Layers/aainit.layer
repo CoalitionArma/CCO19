@@ -36,6 +36,14 @@ PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_Game
  m_bRemoveSquadMarkers 1
  m_iFreezeTime 0
 }
+Vehicle Ural4320_SFRV_ammo1 : "{23F285C0F4872ADC}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_SFRV_ammo.et" {
+ components {
+  SCR_VehicleFactionAffiliationComponent "{5882CBD9AC741CEC}" {
+   "faction affiliation" "US"
+  }
+ }
+ coords 12255.043 17.956 421.595
+}
 SCR_AIGroup : "{47EADE5E4E07076C}Prefabs/Groups/BLUFOR/Group_US_FireTeam_P.et" {
  coords 12288.09 32 8831.744
 }

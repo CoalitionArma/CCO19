@@ -6,6 +6,9 @@ Vehicle : "{FCEC036D7F903A66}Prefabs/Vehicles/Wheeled/BTR70/BTR70_CDF.et" {
     Name "BTR SFRV"
    }
   }
+  SCR_VehicleFactionAffiliationComponent "{5882CBD9AC741CEC}" {
+   "faction affiliation" "US"
+  }
   SlotManagerComponent "{55BCE45E438E4CFF}" {
    Slots {
     RegisteringComponentSlotInfo FIA_CoatOfArms_decal {
