@@ -1,0 +1,23 @@
+Vehicle : "{D9B91FAB817A6033}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered.et" {
+ ID "BBCBA43A9778AE21"
+ components {
+  MeshObject "{51DAA09FEFBFC0E7}" {
+   Materials {
+    MaterialAssignClass "{620819B60C07CFE1}" {
+     SourceMaterial "Ural_Body"
+     AssignedMaterial "{D7EC06E0FC20E822}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Body_CDF.emat"
+    }
+   }
+  }
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo Cargo {
+     Prefab "{36285E38CCA8DD06}Prefabs/Vehicles/Wheeled/Ural4320/VehParts/Ural4320_SFRV_cargo_canvas.et"
+    }
+    RegisteringComponentSlotInfo decal {
+     Prefab "{50670C93FB98F63A}Prefabs/Vehicles/Wheeled/Ural4320/VehParts/SFRV/Ural4320_SFRV_CoatOfArms_decal.et"
+    }
+   }
+  }
+ }
+}

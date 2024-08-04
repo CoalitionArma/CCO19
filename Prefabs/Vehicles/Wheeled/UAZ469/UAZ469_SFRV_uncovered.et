@@ -1,0 +1,24 @@
+Vehicle : "{16A674FE31B0921C}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered.et" {
+ ID "BBCBA43A9778AE21"
+ components {
+  MeshObject "{51DAA09FEFBFC0E7}" {
+   Materials {
+    MaterialAssignClass "{620819B155C5AD25}" {
+     SourceMaterial "UAZ469_Body"
+     AssignedMaterial "{14558E1B6ACFAC02}Assets/Vehicles/Wheeled/UAZ469/Data/UAZ469_Body_CDF.emat"
+    }
+    MaterialAssignClass "{620819B155C5AD4F}" {
+     SourceMaterial "UAZ469_Details"
+     AssignedMaterial "{0F6A5DC693AA2CB4}Assets/Vehicles/Wheeled/UAZ469/Data/UAZ469_Details_CDF.emat"
+    }
+   }
+  }
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo decal {
+     Prefab "{563C94E46C2FBD29}Prefabs/Vehicles/Wheeled/UAZ469/VehParts/Doors/SFRV/UAZ469_SFRV_CoatOfArms_decal.et"
+    }
+   }
+  }
+ }
+}

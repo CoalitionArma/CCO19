@@ -1,0 +1,12 @@
+Vehicle : "{6E9142CD2471741C}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_engineer.et" {
+ ID "BBCBA43A9778AE21"
+ components {
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo decal {
+     Prefab "{549E89CC1E63EAF7}Prefabs/Vehicles/Wheeled/Ural4320/VehParts/OCP/Ural4320_OCP_CoatOfArms_decal.et"
+    }
+   }
+  }
+ }
+}

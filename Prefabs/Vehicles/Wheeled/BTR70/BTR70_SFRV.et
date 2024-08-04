@@ -1,0 +1,22 @@
+Vehicle : "{FCEC036D7F903A66}Prefabs/Vehicles/Wheeled/BTR70/BTR70_CDF.et" {
+ ID "BBCBA43A9778AE21"
+ components {
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo FIA_CoatOfArms_decal {
+     Enabled 1
+     Prefab "{65551A8189345896}Prefabs/Vehicles/Wheeled/BTR70/VehParts/BTR70_SFRV_CoatOfArms_decal.et"
+    }
+    RegisteringComponentSlotInfo CDF_CoatOfArms_decal_L_Bort {
+     Enabled 0
+    }
+    RegisteringComponentSlotInfo CDF_CoatOfArms_decal_R_Bort {
+     Enabled 0
+    }
+    RegisteringComponentSlotInfo CDF_CoatOfArms_decal_Front_Bort {
+     Enabled 0
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,13 @@
+GenericEntity : "{D946310D0CE44123}Prefabs/Vehicles/Wheeled/Ural4320/VehParts/Ural4320_fuel_tank.et" {
+ ID "509C81749AA060EF"
+ components {
+  MeshObject "{4B42E716914465B9}" {
+   Materials {
+    MaterialAssignClass "{6208306D04BF6A4C}" {
+     SourceMaterial "Ural_4320_Cistern"
+     AssignedMaterial "{6D41EA11D3A1F3DC}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Cistern_CDF.emat"
+    }
+   }
+  }
+ }
+}

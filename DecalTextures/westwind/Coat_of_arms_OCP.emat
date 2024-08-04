@@ -1,0 +1,4 @@
+MatPBRDecal : "{66F803693C8814A2}Assets/Vehicles/Wheeled/UAZ469/Data/Coat_of_arms_FIA.emat" {
+ BCRMap "{A39AFF6E3338ECDF}DecalTextures/westwind/OCP-star.edds"
+ OpacityMap "{92B0F81574474F4D}DecalTextures/westwind/OCPDecalEroded_A.edds"
+}
