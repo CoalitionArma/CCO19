@@ -1116,7 +1116,7 @@ AudioClass {
    pi {
     127 0
    }
-   volume_dB 6
+   volume_dB 7
    outState 119819
    outStatePort 7175
   }

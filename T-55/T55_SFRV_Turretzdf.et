@@ -9,6 +9,17 @@ Turret : "{173BB621B9303F22}T-55/T55Turretzdf.et" {
     }
    }
   }
+  SCR_BaseCompartmentManagerComponent "{51ACFBB07A14CFA6}" {
+   CompartmentSlots {
+    TurretCompartmentSlot TurretCompartment {
+     BaseCoverage 0.5
+    }
+   }
+  }
+  TurretComponent "{61DCD08180D9FAD1}" {
+   TurretSpeed 40 40
+   TurretAcceleration 40 40
+  }
  }
  coords 0 0 0.004
 }
