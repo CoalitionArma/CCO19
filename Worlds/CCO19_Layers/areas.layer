@@ -22,7 +22,7 @@ GenericEntity eZone : "{AB200B41DC349F62}Prefabs/Structures/LinearAAS/FlagPole_Z
  angleY 0.004
  angleZ -0.448
 }
-GenericEntity aZone : "{E4A20C9CE20EEC0B}Prefabs/Structures/LinearAAS/FlagPole_Zone_A.et" {
+GenericEntity aZone : "{FA401A99159C997B}Prefabs/Structures/LinearAAS/FlagPole_Zone_A.et" {
  coords 15573.548 50.704 7493.589
  angleX -0.448
  angleY 0.004

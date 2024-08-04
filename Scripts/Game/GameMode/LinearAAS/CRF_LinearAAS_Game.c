@@ -15,21 +15,14 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 	[Attribute("", UIWidgets.EditBox, desc: "Array of all zone object names", category: "Linear AAS Zone Settings")]
 	ref array<string> m_aZoneObjectNames;
 	
+	[RplProp(), Attribute("", UIWidgets.EditBox, desc: "Array of zone status's at mission start. Example from CCO: \n\n 'US:Locked', \n 'US:Locked', \n 'N/A:Locked', \n 'USSR:Locked', \n 'USSR:Locked' \n\n Each line above represents an index in the array, index 1 is zone A, index 2 is Zone B, etc. The value is bassically: FactionKey:Locked/Unlocked", category: "Linear AAS Zone Settings")]
+	ref array<string> m_aZonesStatus;
+	
 	[Attribute("10", "auto", "Min number of players needed to cap a zone", category: "Linear AAS Zone Settings")]
 	int m_aMinNumberOfPlayersNeeded;
 	
 	// - All players withing a zones range
 	ref array<SCR_ChimeraCharacter> m_aAllPlayersWithinZoneRange = new array<SCR_ChimeraCharacter>;
-	
-	// - Each zones status
-	[RplProp()]
-	ref array<string> m_aZonesStatus = {
-		"US:Locked",    // Zone A
-		"US:Locked",    // Zone B 
-		"N/A:Locked",   // Zone C
-		"USSR:Locked",  // Zone D
-		"USSR:Locked"   // Zone E
-	};
 	
 	//------------------------------------------------------------------------------------------------
 
