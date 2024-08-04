@@ -53,12 +53,12 @@ modded class SCR_MapUIBaseComponent
 			TStringArray markerStringArray = {};
 			markerString.Split("||", markerStringArray, false);
 			
-			SetMarker(i, markerStringArray[0], markerStringArray[1].ToVector(), markerStringArray[2].ToFloat(), markerStringArray[3], markerStringArray[4]);
+			SetMarker(i, markerStringArray[0], markerStringArray[1].ToVector(), markerStringArray[2].ToFloat(), markerStringArray[3], markerStringArray[4], Color.FromInt(markerStringArray[5].ToInt()));
 		};
 	}
 	
 	//------------------------------------------------------------------------------------------------
-	void SetMarker(int markerInt, string markerEntityName, vector markerOffset, float timeDelay, string markerText, string markerImage) 
+	void SetMarker(int markerInt, string markerEntityName, vector markerOffset, float timeDelay, string markerText, string markerImage, Color markerColor) 
 	{
 		vector pos;
 		
@@ -99,6 +99,7 @@ modded class SCR_MapUIBaseComponent
 		};
 			
 		Widget widget = GetGame().GetWorkspace().CreateWidgets("{DD15734EB89D74E2}UI/layouts/Map/MapMarkerBase.layout", m_RootWidget);
+		widget.SetZOrder(999);
 		
 		if (!widget)
 			return;
