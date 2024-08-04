@@ -2,6 +2,8 @@ TracerProjectile : "{A4E070505C87AD42}Prefabs/Weapons/Ammo/Ammo_127x99_Ball_M33.
  ID "70242781DB2FDA8A"
  components {
   ShellMoveComponent "{851AA4A2AE0A5691}" {
+   InitSpeed 1250
+   DispersionMultiplier 2
    TimeToLive 250
    ProjectileEffects {
     ProjectileDamage "{5168BBF3DBD79134}" {
