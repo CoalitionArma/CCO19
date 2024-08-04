@@ -1,0 +1,129 @@
+$grp GenericEntity : "{01E0B52B5BA2EF72}Prefabs/Compositions/Misc/SubCompositions/Sandbag_Barricade_USSR_04.et" {
+ {
+  coords 11736.564 30.812 11872.893
+  angleY 53.711
+ }
+ {
+  coords 12203.553 41.625 9779.946
+  angleY -135.796
+ }
+}
+GenericEntity : "{05137D09E06465C6}Prefabs/Compositions/Misc/SubCompositions/Sandbag_Barricade_US_04.et" {
+ coords 13865.938 47.34 9031.485
+ angleY -154.771
+}
+$grp GenericEntity : "{3CD490132ECE6645}Prefabs/Compositions/Misc/SubCompositions/Sandbag_Barricade_USSR_03.et" {
+ {
+  coords 11725.01 30.812 11867.105
+  angleY -49.873
+ }
+ {
+  coords 12210.222 41.625 9792.711
+  angleY 9.713
+ }
+ {
+  coords 12202.305 41.625 9786.58
+ }
+}
+$grp GenericEntity : "{8F623F3CB68525DC}Prefabs/Compositions/Misc/SubCompositions/Sandbag_Cluttered_US_01.et" {
+ {
+  coords 13864.637 46.939 9035.723
+  angleY 0
+ }
+ {
+  coords 15573.321 49.492 7493.71
+  angleY 0
+ }
+ {
+  coords 12212.229 41.377 9785.563
+  angleY -178.145
+ }
+}
+$grp GenericEntity : "{B1EF20282529F4B4}Prefabs/Compositions/Misc/SubCompositions/Sandbag_Barricade_US_01.et" {
+ {
+  coords 13862.367 47.247 9038.944
+ }
+ {
+  coords 15577.147 49.968 7490.892
+  angleY 151.234
+ }
+ {
+  coords 12212.457 41.625 9776.113
+  angleY -168.023
+ }
+}
+$grp GenericEntity : "{B51CE80A9EEF7E00}Prefabs/Compositions/Misc/SubCompositions/Sandbag_Barricade_USSR_01.et" {
+ {
+  coords 10504.525 82.7 13804.854
+  angleY -70.537
+ }
+ {
+  coords 11733.573 30.813 11865.809
+  angleY 145.229
+ }
+ {
+  coords 10505.233 82.617 13805.693
+  angleY 109.019
+ }
+ {
+  coords 11724.778 30.826 11878.037
+ }
+ {
+  coords 12204.598 41.625 9789.742
+  angleY -24.873
+ }
+ {
+  coords 12209.024 41.625 9775.254
+  angleY -141.32
+ }
+}
+$grp GenericEntity : "{DDBB14C899ED7B9A}Prefabs/Compositions/Misc/SubCompositions/Sandbag_Barricade_US_02.et" {
+ {
+  coords 13871.614 47.672 9036.723
+  angleY 137.496
+ }
+ {
+  coords 15578.285 49.969 7498.85
+  angleY 84.651
+ }
+ {
+  coords 12220.336 41.625 9786.634
+  angleY 153.857
+ }
+ {
+  coords 12221.091 41.625 9777.351
+  angleY 150.109
+ }
+}
+$grp GenericEntity : "{E08F31F0EC81F2AD}Prefabs/Compositions/Misc/SubCompositions/Sandbag_Barricade_US_05.et" {
+ {
+  coords 13857.694 47.064 9034.682
+  angleY -104.973
+ }
+ {
+  coords 15568.682 49.969 7493.654
+  angleY -90.458
+ }
+ {
+  coords 12215.838 41.625 9792.427
+  angleY 13.618
+ }
+}
+$grp GenericEntity : "{F64448992B0D71C6}Prefabs/Compositions/Misc/SubCompositions/Sandbag_Cluttered_USSR_01.et" {
+ {
+  coords 10505.316 82.255 13805.475
+  angleY -173.622
+ }
+ {
+  coords 11729.694 30.498 11867.597
+  angleY 0
+ }
+ {
+  coords 10504.592 82.255 13805.468
+  angleY 0
+ }
+ {
+  coords 12210.898 41.377 9785.564
+  angleY 0
+ }
+}

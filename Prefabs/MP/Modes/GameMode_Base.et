@@ -1,6 +1,8 @@
 SCR_BaseGameMode {
  ID "56B2B479C6B96951"
  components {
+  CRF_LinearAASGameModeComponent "{620767D093757C52}" {
+  }
   CRF_LoggingServerComponent "{62051828F3A45E77}" {
   }
   CRF_SafestartGameModeComponent "{61FD260E8973CC41}" {
