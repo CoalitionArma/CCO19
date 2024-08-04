@@ -1,0 +1,17 @@
+Vehicle : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
+ ID "44EC665ABD2FF04B"
+ components {
+  SCR_EditableVehicleComponent "{50DEB7C26B5EB312}" {
+   m_UIInfo SCR_EditableVehicleUIInfo "{5298E609432D192D}" {
+    Name "UAZ OCP"
+   }
+  }
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo decal {
+     Prefab "{F4A2524056A8ACC3}Prefabs/Vehicles/Wheeled/UAZ469/VehParts/Doors/OCP/UAZ469_OCP_CoatOfArms_decal.et"
+    }
+   }
+  }
+ }
+}

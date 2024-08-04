@@ -1,0 +1,31 @@
+Vehicle : "{6E9142CD2471741C}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_engineer.et" {
+ ID "BBCBA43A9778AE21"
+ components {
+  MeshObject "{51DAA09FEFBFC0E7}" {
+   Materials {
+    MaterialAssignClass "{6208306E3CCD6CD2}" {
+     SourceMaterial "Ural_Body"
+     AssignedMaterial "{D7EC06E0FC20E822}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Body_CDF.emat"
+    }
+   }
+  }
+  SCR_EditableVehicleComponent "{50DEB7C26B5EB312}" {
+   m_UIInfo SCR_EditableVehicleUIInfo "{5298E609432D192D}" {
+    Name "Ural SFRV Engineer"
+   }
+  }
+  SCR_VehicleFactionAffiliationComponent "{5882CBD9AC741CEC}" {
+   "faction affiliation" "US"
+  }
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo EngineerBox {
+     Prefab "{ABAC1541083AA777}Prefabs/Vehicles/Wheeled/Ural4320/VehParts/Ural4320_SFRV_engineer_box.et"
+    }
+    RegisteringComponentSlotInfo decal {
+     Prefab "{50670C93FB98F63A}Prefabs/Vehicles/Wheeled/Ural4320/VehParts/SFRV/Ural4320_SFRV_CoatOfArms_decal.et"
+    }
+   }
+  }
+ }
+}

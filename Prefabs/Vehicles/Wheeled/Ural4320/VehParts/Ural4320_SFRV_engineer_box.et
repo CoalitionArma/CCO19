@@ -1,0 +1,13 @@
+GenericEntity : "{11037F1D2CCE0ED7}Prefabs/Vehicles/Wheeled/Ural4320/VehParts/Ural4320_engineer_box.et" {
+ ID "4B42E71698F5739C"
+ components {
+  MeshObject "{4B42E716914465B9}" {
+   Materials {
+    MaterialAssignClass "{6208306DF74B4507}" {
+     SourceMaterial "base1"
+     AssignedMaterial "{E96A73AF888C8543}Assets/Vehicles/Wheeled/Ural4320/Data/Ural_4320_Cargo_CDF.emat"
+    }
+   }
+  }
+ }
+}
