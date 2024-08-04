@@ -1,0 +1,100 @@
+FrameWidgetClass {
+ Name "rootFrame"
+ {
+  ProgressBarWidgetClass "{62080BF22B256F5E}" {
+   Name "SiteCaptureBar"
+   Slot FrameWidgetSlot "{62080BF22B256FB1}" {
+    PositionX 711.74
+    OffsetLeft 711.74
+    PositionY 94.78
+    OffsetTop 94.78
+    SizeX 496.01
+    OffsetRight -1207.75
+    SizeY 30
+    OffsetBottom -124.78
+   }
+   Maximum 60
+   Current 0
+  }
+  ImageWidgetClass "{62080BF271278881}" {
+   Name "ASite"
+   Slot FrameWidgetSlot "{62080BF33FE8089B}" {
+    Anchor 0.5 0 0.5 0
+    PositionX -247.913
+    OffsetLeft -247.913
+    PositionY 6.741
+    OffsetTop 6.741
+    SizeX 79.981
+    OffsetRight 167.932
+    SizeY 79.431
+    OffsetBottom -86.172
+   }
+   Texture "{E5AC2ABE05771CA1}Images/UI/Objectives/A.edds"
+   Size 500 500
+  }
+  ImageWidgetClass "{62080BF27F152548}" {
+   Name "BSite"
+   Slot FrameWidgetSlot "{62080BF33FE8089B}" {
+    Anchor 0.5 0 0.5 0
+    PositionX -144.375
+    OffsetLeft -144.375
+    PositionY 7.039
+    OffsetTop 7.039
+    SizeX 79.981
+    OffsetRight 64.394
+    SizeY 79.431
+    OffsetBottom -86.47
+   }
+   Texture "{BB4403FDBAFA92AE}Images/UI/Objectives/B.edds"
+   Size 500 500
+  }
+  ImageWidgetClass "{62080BF296F8D660}" {
+   Name "CSite"
+   Slot FrameWidgetSlot "{62080BF33FE8089B}" {
+    Anchor 0.5 0 0.5 0
+    PositionX -40.854
+    OffsetLeft -40.854
+    PositionY 7.278
+    OffsetTop 7.278
+    SizeX 79.982
+    OffsetRight -39.127
+    SizeY 79.431
+    OffsetBottom -86.709
+   }
+   Texture "{4F4C4465B727FADA}Images/UI/Objectives/C.edds"
+   Size 500 500
+  }
+  ImageWidgetClass "{62080BF24050D52F}" {
+   Name "DSite"
+   Slot FrameWidgetSlot "{62080BF33FE8089B}" {
+    Anchor 0.5 0 0.5 0
+    PositionX 63.615
+    OffsetLeft 63.615
+    PositionY 7.278
+    OffsetTop 7.278
+    SizeX 79.981
+    OffsetRight -143.596
+    SizeY 79.431
+    OffsetBottom -86.709
+   }
+   Texture "{0694517AC5E18EB0}Images/UI/Objectives/D.edds"
+   Size 500 500
+  }
+  ImageWidgetClass "{62080BF258B83533}" {
+   Name "ESite"
+   Slot FrameWidgetSlot "{62080BF33FE8089B}" {
+    Anchor 0.5 0 0.5 0
+    PositionX 167.816
+    OffsetLeft 167.816
+    PositionY 7.278
+    OffsetTop 7.278
+    SizeX 79.981
+    OffsetRight -247.797
+    SizeY 79.431
+    OffsetBottom -86.709
+   }
+   Texture "{F29C16E2C83CE6C4}Images/UI/Objectives/E.edds"
+   Size 500 500
+  }
+ }
+}
