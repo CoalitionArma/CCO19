@@ -1,4 +1,4 @@
-modded class SCR_MapUIBaseComponent
+modded class SCR_MapMarkersUI
 {
 	static SCR_MapEntity m_MapUnitEntity;
 	static bool m_isMapOpen = false;
@@ -26,11 +26,6 @@ modded class SCR_MapUIBaseComponent
 			return;
 		
 		GetGame().GetCallqueue().Remove(AddInitialMarkers);
-		
-		foreach(Widget marker, string markerString : m_mStoredWidgetSettingsMap)
-		{
-			delete marker;
-		};
 		
 		m_mStoredWidgetSettingsMap.Clear();
 		
