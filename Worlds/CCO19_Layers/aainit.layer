@@ -44,6 +44,29 @@ PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_Game
  m_iReconnectTime -1
  m_bRemoveSquadMarkers 1
  m_iFreezeTime 0
+ {
+  SCR_FactionManager {
+   ID "5ED9088735FF2D8B"
+   Factions {
+    SCR_Faction "{56DEAC40D2DBC8B1}" {
+     UIInfo SCR_FactionUIInfo "{528C961236B7DCD3}" {
+      Name "SFRV"
+      Icon "{8618D11C3784730C}Images/SFRV.edds"
+      m_sNameUpper "SFRV"
+     }
+     m_bIsPlayable 1
+    }
+    SCR_Faction "{56DEAC40D3C2E623}" {
+     UIInfo SCR_FactionUIInfo "{528C96127F8B6B08}" {
+      Name "OCP"
+      Icon "{A39AFF6E3338ECDF}DecalTextures/westwind/OCP-star.edds"
+      m_sNameUpper "OCP"
+     }
+     m_bIsPlayable 1
+    }
+   }
+  }
+ }
 }
 Vehicle Ural4320_SFRV_ammo1 : "{23F285C0F4872ADC}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_SFRV_ammo.et" {
  components {
