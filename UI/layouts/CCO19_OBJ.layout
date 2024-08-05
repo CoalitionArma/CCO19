@@ -5,18 +5,18 @@ FrameWidgetClass {
    Name "SiteCaptureText"
    Slot FrameWidgetSlot "{62080BF138A8EE54}" {
     Anchor 0.5 0 0.5 0
-    PositionX -125
-    OffsetLeft -125
-    PositionY 74
-    OffsetTop 74
-    SizeX 250
-    OffsetRight -125
-    SizeY 18
-    OffsetBottom -92
+    PositionX -100
+    OffsetLeft -100
+    PositionY 52
+    OffsetTop 52
+    SizeX 200
+    OffsetRight -100
+    SizeY 16
+    OffsetBottom -68
    }
-   Text "C Site Unlocks: 20:00"
-   "Font Size" 22
-   "Min Font Size" 22
+   Text ""
+   "Font Size" 16
+   "Min Font Size" 16
    "Horizontal Alignment" Center
    "Vertical Alignment" Center
   }
@@ -24,15 +24,17 @@ FrameWidgetClass {
    Name "SiteCaptureBar"
    Slot FrameWidgetSlot "{62080BF22B256FB1}" {
     Anchor 0.5 0 0.5 0
-    PositionX -125
-    OffsetLeft -125
-    PositionY 58
-    OffsetTop 58
-    SizeX 250
-    OffsetRight -125
-    SizeY 12
-    OffsetBottom -70
+    PositionX -100
+    OffsetLeft -100
+    PositionY 42
+    OffsetTop 42
+    SizeX 200
+    OffsetRight -100
+    SizeY 8
+    OffsetBottom -50
    }
+   Opacity 0
+   Color 0.68 0.68 0.68 0.843
    Maximum 60
    Current 0
   }
@@ -40,14 +42,14 @@ FrameWidgetClass {
    Name "ASite"
    Slot FrameWidgetSlot "{62080BF33FE8089B}" {
     Anchor 0.5 0 0.5 0
-    PositionX -150
-    OffsetLeft -150
+    PositionX -104
+    OffsetLeft -104
     PositionY 8
     OffsetTop 8
-    SizeX 50
-    OffsetRight 100
-    SizeY 50
-    OffsetBottom -58
+    SizeX 35
+    OffsetRight 69
+    SizeY 35
+    OffsetBottom -43
    }
    Color 0 0.01 1 1
    Texture "{E5AC2ABE05771CA1}UI/Objectives/A.edds"
@@ -57,14 +59,14 @@ FrameWidgetClass {
    Name "BSite"
    Slot FrameWidgetSlot "{62080BF33FE8089B}" {
     Anchor 0.5 0 0.5 0
-    PositionX -87.5
-    OffsetLeft -87.5
+    PositionX -60.75
+    OffsetLeft -60.8
     PositionY 8
     OffsetTop 8
-    SizeX 50
-    OffsetRight 37.5
-    SizeY 50
-    OffsetBottom -58
+    SizeX 35
+    OffsetRight 25.8
+    SizeY 35
+    OffsetBottom -43
    }
    Color 0 0.011 0.914 1
    Texture "{BB4403FDBAFA92AE}UI/Objectives/B.edds"
@@ -74,14 +76,14 @@ FrameWidgetClass {
    Name "CSite"
    Slot FrameWidgetSlot "{62080BF33FE8089B}" {
     Anchor 0.5 0 0.5 0
-    PositionX -25
-    OffsetLeft -25
+    PositionX -17.5
+    OffsetLeft -17.5
     PositionY 8
     OffsetTop 8
-    SizeX 50
-    OffsetRight -25
-    SizeY 50
-    OffsetBottom -58
+    SizeX 35
+    OffsetRight -17.5
+    SizeY 35
+    OffsetBottom -43
    }
    Color 0.753 0.753 0.753 1
    Texture "{4F4C4465B727FADA}UI/Objectives/C.edds"
@@ -91,14 +93,14 @@ FrameWidgetClass {
    Name "DSite"
    Slot FrameWidgetSlot "{62080BF33FE8089B}" {
     Anchor 0.5 0 0.5 0
-    PositionX 37.5
-    OffsetLeft 37.5
+    PositionX 26.25
+    OffsetLeft 26.2
     PositionY 8
     OffsetTop 8
-    SizeX 50
-    OffsetRight -87.5
-    SizeY 50
-    OffsetBottom -58
+    SizeX 35
+    OffsetRight -61.2
+    SizeY 35
+    OffsetBottom -43
    }
    Color 1 0.01 0 1
    Texture "{0694517AC5E18EB0}UI/Objectives/D.edds"
@@ -108,14 +110,14 @@ FrameWidgetClass {
    Name "ESite"
    Slot FrameWidgetSlot "{62080BF33FE8089B}" {
     Anchor 0.5 0 0.5 0
-    PositionX 100
-    OffsetLeft 100
+    PositionX 70
+    OffsetLeft 70
     PositionY 8
     OffsetTop 8
-    SizeX 50
-    OffsetRight -150
-    SizeY 50
-    OffsetBottom -58
+    SizeX 35
+    OffsetRight -105
+    SizeY 35
+    OffsetBottom -43
    }
    Color 1 0.01 0 1
    Texture "{F29C16E2C83CE6C4}UI/Objectives/E.edds"
@@ -125,14 +127,14 @@ FrameWidgetClass {
    Name "ASiteLock"
    Slot FrameWidgetSlot "{62080BF33FE8089B}" {
     Anchor 0.5 0 0.5 0
-    PositionX -150
-    OffsetLeft -150
-    PositionY 8
-    OffsetTop 8
-    SizeX 50
-    OffsetRight 100
-    SizeY 50
-    OffsetBottom -58
+    PositionX -104
+    OffsetLeft -104
+    PositionY 8.214
+    OffsetTop 8.2
+    SizeX 35
+    OffsetRight 69
+    SizeY 35
+    OffsetBottom -43.2
    }
    Color 0.27 0.27 0.27 1
    Texture "{91427B7866707601}UI/Objectives/lock.edds"
@@ -142,14 +144,14 @@ FrameWidgetClass {
    Name "BSiteLock"
    Slot FrameWidgetSlot "{62080BF33FE8089B}" {
     Anchor 0.5 0 0.5 0
-    PositionX -87.5
-    OffsetLeft -87.5
-    PositionY 8
-    OffsetTop 8
-    SizeX 50
-    OffsetRight 37.5
-    SizeY 50
-    OffsetBottom -58
+    PositionX -60.75
+    OffsetLeft -60.8
+    PositionY 7.786
+    OffsetTop 7.8
+    SizeX 35
+    OffsetRight 25.8
+    SizeY 35
+    OffsetBottom -42.8
    }
    Color 0.27 0.27 0.27 1
    Texture "{91427B7866707601}UI/Objectives/lock.edds"
@@ -159,14 +161,14 @@ FrameWidgetClass {
    Name "CSiteLock"
    Slot FrameWidgetSlot "{62080BF33FE8089B}" {
     Anchor 0.5 0 0.5 0
-    PositionX -25
-    OffsetLeft -25
+    PositionX -17.5
+    OffsetLeft -17.5
     PositionY 8
     OffsetTop 8
-    SizeX 50
-    OffsetRight -25
-    SizeY 50
-    OffsetBottom -58
+    SizeX 35
+    OffsetRight -17.5
+    SizeY 35
+    OffsetBottom -43
    }
    Color 0.27 0.27 0.27 1
    Texture "{91427B7866707601}UI/Objectives/lock.edds"
@@ -176,14 +178,14 @@ FrameWidgetClass {
    Name "DSiteLock"
    Slot FrameWidgetSlot "{62080BF33FE8089B}" {
     Anchor 0.5 0 0.5 0
-    PositionX 37.5
-    OffsetLeft 37.5
+    PositionX 26.25
+    OffsetLeft 26.2
     PositionY 8
     OffsetTop 8
-    SizeX 50
-    OffsetRight -87.5
-    SizeY 50
-    OffsetBottom -58
+    SizeX 35
+    OffsetRight -61.2
+    SizeY 35
+    OffsetBottom -43
    }
    Color 0.27 0.27 0.27 1
    Texture "{91427B7866707601}UI/Objectives/lock.edds"
@@ -193,14 +195,14 @@ FrameWidgetClass {
    Name "ESiteLock"
    Slot FrameWidgetSlot "{62080BF33FE8089B}" {
     Anchor 0.5 0 0.5 0
-    PositionX 100
-    OffsetLeft 100
+    PositionX 70
+    OffsetLeft 70
     PositionY 8
     OffsetTop 8
-    SizeX 50
-    OffsetRight -150
-    SizeY 50
-    OffsetBottom -58
+    SizeX 35
+    OffsetRight -105
+    SizeY 35
+    OffsetBottom -43
    }
    Color 0.27 0.27 0.27 1
    Texture "{91427B7866707601}UI/Objectives/lock.edds"

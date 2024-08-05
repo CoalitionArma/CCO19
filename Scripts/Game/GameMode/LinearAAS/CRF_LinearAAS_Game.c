@@ -9,20 +9,31 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 	[Attribute("US", "auto", "The side designated as blufor", category: "Linear AAS Player Settings")]
 	FactionKey bluforSide;
 	
+	[Attribute("SFRV", "auto", "Nickname for the side designated as blufor", category: "Linear AAS Player Settings")]
+	FactionKey bluforSideNickname;
+	
 	[Attribute("USSR", "auto", "The side designated as opfor", category: "Linear AAS Player Settings")]
 	FactionKey opforSide;
+	
+	[Attribute("OCP", "auto", "Nickname for the side designated as blufor", category: "Linear AAS Player Settings")]
+	FactionKey opforSideNickname;
 	
 	[Attribute("", UIWidgets.EditBox, desc: "Array of all zone object names", category: "Linear AAS Zone Settings")]
 	ref array<string> m_aZoneObjectNames;
 	
-	[RplProp(), Attribute("", UIWidgets.EditBox, desc: "Array of zone status's at mission start. Example from CCO: \n\n 'US:Locked', \n 'US:Locked', \n 'N/A:Locked', \n 'USSR:Locked', \n 'USSR:Locked' \n\n Each line above represents an index in the array, index 1 is zone A, index 2 is Zone B, etc. The value is bassically: FactionKey:Locked/Unlocked", category: "Linear AAS Zone Settings")]
+	[RplProp(onRplName: "UpdateClients"), Attribute("", UIWidgets.EditBox, desc: "Array of zone status's at mission start. Example from CCO: \n\n 'US:Locked', \n 'US:Locked', \n 'N/A:Locked', \n 'USSR:Locked', \n 'USSR:Locked' \n\n Each line above represents an index in the array, index 1 is zone A, index 2 is Zone B, etc. The value is bassically: FactionKey:Locked/Unlocked", category: "Linear AAS Zone Settings")]
 	ref array<string> m_aZonesStatus;
 	
 	[Attribute("10", "auto", "Min number of players needed to cap a zone", category: "Linear AAS Zone Settings")]
-	int m_aMinNumberOfPlayersNeeded;
+	int m_iMinNumberOfPlayersNeeded;
 	
 	// - All players withing a zones range
 	ref array<SCR_ChimeraCharacter> m_aAllPlayersWithinZoneRange = new array<SCR_ChimeraCharacter>;
+	
+	[RplProp()]
+	string hudMessage;
+	
+	int InitialTime = 20;
 	
 	//------------------------------------------------------------------------------------------------
 
@@ -43,12 +54,15 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 	override protected void OnPostInit(IEntity owner)
 	{
 		super.OnPostInit(owner);
+		
+		GetGame().GetCallqueue().CallLater(CheckAddInitialMarkers, 1000, true);
 
 		//--- Server only
 		if (RplSession.Mode() == RplMode.Client)
 			return;
 			
 		GetGame().GetCallqueue().CallLater(UpdateZones, 1000, true);
+		GetGame().GetCallqueue().CallLater(StartGame, 1000, true);
 	}
 	
 	//------------------------------------------------------------------------------------------------
@@ -57,9 +71,58 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 
 	//------------------------------------------------------------------------------------------------
 	
+	void StartGame()
+	{
+		CRF_SafestartGameModeComponent safestart = CRF_SafestartGameModeComponent.GetInstance();
+		if(safestart.GetSafestartStatus() || !SCR_BaseGameMode.Cast(GetGame().GetGameMode()).IsRunning())
+			return;
+		
+		if(InitialTime != 0)
+		{
+			m_aZonesStatus.Set(((m_aZonesStatus.Count()-1)/2), string.Format("%1:%2:%3", "N/A", InitialTime, "N/A"));
+			hudMessage = string.Format("Zone C Unlocked: %1", SCR_FormatHelper.FormatTime(InitialTime));
+			InitialTime = InitialTime - 1;
+			Replication.BumpMe();
+			return;
+		}	
+		
+		m_aZonesStatus.Set(((m_aZonesStatus.Count()-1)/2), string.Format("%1:%2:%3", "N/A", "Unlocked", "N/A"));
+		hudMessage = "Zone C Unlocked!";
+		UpdateClients();
+		Replication.BumpMe();
+		
+		GetGame().GetCallqueue().Remove(StartGame);
+		
+		GetGame().GetCallqueue().CallLater(ResetMessage, 6000);
+	}
 	
+	//------------------------------------------------------------------------------------------------
+	void ResetMessage()
+	{
+		hudMessage = "";
+		Replication.BumpMe();
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	void CheckAddInitialMarkers()
+	{
+		// Create markers on each bomb site
+		CRF_GameModePlayerComponent gameModePlayerComponent = CRF_GameModePlayerComponent.GetInstance();
+		if (!gameModePlayerComponent) 
+			return;
+		
+		gameModePlayerComponent.UpdateMapMarkers(m_aZonesStatus, m_aZoneObjectNames, bluforSide, opforSide);
+		
+		GetGame().GetCallqueue().Remove(CheckAddInitialMarkers);
+	}
+	
+	//------------------------------------------------------------------------------------------------
 	protected void UpdateZones()
 	{
+		CRF_SafestartGameModeComponent safestart = CRF_SafestartGameModeComponent.GetInstance();
+		if(safestart.GetSafestartStatus() || !SCR_BaseGameMode.Cast(GetGame().GetGameMode()).IsRunning())
+			return;
+		
 		foreach(int i, string zoneName : m_aZoneObjectNames)
 		{
 			m_aAllPlayersWithinZoneRange.Clear();
@@ -69,10 +132,10 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 			if(!zone)
 				continue;
 			
-			GetGame().GetWorld().QueryEntitiesBySphere(zone.GetOrigin(), 50, ProcessEntity, null, EQueryEntitiesFlags.DYNAMIC | EQueryEntitiesFlags.WITH_OBJECT); // get all entitys withing a 50m radius around the zone
+			GetGame().GetWorld().QueryEntitiesBySphere(zone.GetOrigin(), 75, ProcessEntity, null, EQueryEntitiesFlags.DYNAMIC | EQueryEntitiesFlags.WITH_OBJECT); // get all entitys withing a 50m radius around the zone
 			
-			int bluforInZone = 0;
-			int opforInZone = 0;
+			float bluforInZone = 0;
+			float opforInZone = 0;
 			
 			foreach(SCR_ChimeraCharacter player : m_aAllPlayersWithinZoneRange) 
 			{
@@ -83,11 +146,33 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 					opforInZone = opforInZone + 1;
 			};
 			
-			if (bluforInZone >= m_aMinNumberOfPlayersNeeded && opforInZone < bluforInZone)
-				CheckStartCaptureZone(i, bluforSide);
+			string status = m_aZonesStatus[i];
 			
-			if (opforInZone >= m_aMinNumberOfPlayersNeeded && bluforInZone < opforInZone)
-				CheckStartCaptureZone(i, opforSide);
+			array<string> zoneStatusArray = {};
+			status.Split(":", zoneStatusArray, false);
+			
+			FactionKey zoneFaction = zoneStatusArray[0];
+			string zoneState = zoneStatusArray[1];
+			FactionKey zoneFactionStored = zoneStatusArray[2];
+			
+			if (bluforInZone >= m_iMinNumberOfPlayersNeeded && opforInZone < (bluforInZone/2))
+			{
+				CheckStartCaptureZone(i, bluforSide, zoneFaction, zoneState, zoneFactionStored);
+				return;
+			}
+			
+			if (opforInZone >= m_iMinNumberOfPlayersNeeded && bluforInZone < (opforInZone/2)) 
+			{
+				CheckStartCaptureZone(i, opforSide, zoneFaction, zoneState, zoneFactionStored);
+				return;
+			}
+			
+			if(zoneState.ToInt() != 0)  
+			{
+				m_aZonesStatus.Set(i, string.Format("%1:%2:%3", zoneFactionStored, "Unlocked", zoneFactionStored));
+				UpdateClients();
+				Replication.BumpMe();
+			};
 		};
 	};
 	
@@ -103,12 +188,74 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 			return true;
 
 		m_aAllPlayersWithinZoneRange.Insert(playerCharacter);
-
 		return true;
 	}
 	
-	protected void CheckStartCaptureZone(int zoneIndex, FactionKey side)
-	{
+	//------------------------------------------------------------------------------------------------
+	protected void CheckStartCaptureZone(int zoneIndex, FactionKey side, FactionKey zoneFaction, string zoneState, FactionKey zoneFactionStored)
+	{	
+		if (zoneState == "Locked" || (zoneFaction == side && zoneState == "Unlocked")) 
+			return;
 		
+		if(zoneState.ToInt() >= 60) 
+		{
+			m_aZonesStatus.Set(zoneIndex, string.Format("%1:%2:%3", side, "Locked", side));
+			GetGame().GetCallqueue().CallLater(UnlockZone, 1000, true, zoneIndex, 20);
+			ZoneCaptured(zoneIndex, side);
+			return;
+		};
+		 
+		m_aZonesStatus.Set(zoneIndex, string.Format("%1:%2:%3", side, zoneState.ToInt() + 1, zoneFactionStored));
+		
+		UpdateClients();
+		Replication.BumpMe();
 	};
+	
+	void ZoneCaptured(int zoneIndex, FactionKey side)
+	{
+		string zonesStatusToChange;
+		string zonePretty;
+		string nickname;
+		int zoneIndexToChange;
+			
+		switch(zoneIndex)
+		{
+			case 0 : {zonePretty = "A"; break;};
+			case 1 : {zonePretty = "B"; break;};
+			case 2 : {zonePretty = "C"; break;};
+			case 3 : {zonePretty = "D"; break;};
+			case 4 : {zonePretty = "E"; break;};
+		}
+			
+		switch(side)
+		{
+			case bluforSide : { nickname = bluforSideNickname; zoneIndexToChange = zoneIndex + 1; break;}; //Blufor
+			case opforSide  : { nickname = opforSideNickname;  zoneIndexToChange = zoneIndex - 1; break;}; //Opfor
+		}
+		
+		hudMessage = string.Format("%1 Captured Zone %2!", nickname, zonePretty);
+		
+		GetGame().GetCallqueue().CallLater(ResetMessage, 6000);
+		
+		string zoneStatusToChange = m_aZonesStatus.Get(zoneIndexToChange);
+		
+		array<string> zoneStatusToChangeArray = {};
+		zoneStatusToChange.Split(":", zoneStatusToChangeArray, false);
+		
+		m_aZonesStatus.Set(zoneIndexToChange, string.Format("%1:%2:%3", zoneStatusToChangeArray[0], "Unlocked", zoneStatusToChangeArray[2]));
+		UpdateClients();
+		Replication.BumpMe();
+	}
+	
+	void UnlockZone(int zoneIndex, int timeToUnlock)
+	{
+	
+	
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	void UpdateClients()
+	{
+		CRF_GameModePlayerComponent.GetInstance().UpdateMapMarkers(m_aZonesStatus, m_aZoneObjectNames, bluforSide, opforSide);
+	}
 };

@@ -31,8 +31,9 @@ PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_Game
     "aZone" "bZone" "cZone" "dZone" "eZone"
    }
    m_aZonesStatus {
-    "US:Locked" "US:Locked" "N/A:Locked" "USSR:Locked" "USSR:Locked"
+    "US:Locked:US" "US:Locked:US" "N/A:Locked:N/A" "USSR:Locked:USSR" "USSR:Locked:USSR"
    }
+   m_iMinNumberOfPlayersNeeded 1
   }
   CRF_SafestartGameModeComponent "{61FD260E8973CC41}" {
    m_iTimeLimitMinutes 180
@@ -52,6 +53,17 @@ Vehicle Ural4320_SFRV_ammo1 : "{23F285C0F4872ADC}Prefabs/Vehicles/Wheeled/Ural43
  }
  coords 12255.043 17.956 421.595
 }
-SCR_AIGroup : "{47EADE5E4E07076C}Prefabs/Groups/BLUFOR/Group_US_FireTeam_P.et" {
- coords 12288.09 32 8831.744
+$grp SCR_AIGroup : "{47EADE5E4E07076C}Prefabs/Groups/BLUFOR/Group_US_FireTeam_P.et" {
+ {
+  coords 12288.09 32 8831.744
+ }
+ {
+  coords 12297.344 32 8831.744
+ }
+ {
+  coords 12297.344 32 8839.639
+ }
+ {
+  coords 12288.656 32 8839.639
+ }
 }

@@ -49,16 +49,17 @@ class CRF_GameModePlayerComponent: ScriptComponent
 	{	
 		RemoveALLScriptedMarkers();
 		
-		foreach(int i, string status : zoneStatus)
+		foreach(int i, string zoneName : zoneObjectNames)
 		{
-			array<string> zoneStatusArray = {};
-			status.Split(":", zoneStatusArray, true);
-			
-			FactionKey zonefaction = zoneStatusArray[0];
-			string zoneLocked = zoneStatusArray[1];
-			string zoneName = zoneObjectNames[i];
+			string status = zoneStatus[i];
 			string imageTexture;
 			int imageColor;
+			
+			array<string> zoneStatusArray = {};
+			status.Split(":", zoneStatusArray, false);
+			
+			string zoneLocked = zoneStatusArray[1];
+			FactionKey zoneFactionStored = zoneStatusArray[2];
 			
 			switch(zoneName)
 			{
@@ -70,17 +71,17 @@ class CRF_GameModePlayerComponent: ScriptComponent
 			}
 			
 			if(zoneLocked == "Locked")
-				AddScriptedMarker(zoneName, "0 0 0", 0, "", "{91427B7866707601}UI\Objectives\lock.edds", ARGB(255, 142, 142, 142));
+				AddScriptedMarker(zoneName, "0 0 0", 0, "", "{91427B7866707601}UI\Objectives\lock.edds", 50, ARGB(255, 142, 142, 142));
 			
-			switch(zonefaction)
+			switch(zoneFactionStored)
 			{
 				case bluforSide : {imageColor = ARGB(255, 0, 25, 225);     break;};  //Blufor
 				case opforSide  : {imageColor = ARGB(255, 225, 25, 0);     break;};  //Opfor
 				default         : {imageColor = ARGB(255, 225, 225, 225);  break;};  //Uncaptured
 			}
 			
-			AddScriptedMarker(zoneName, "0 0 0", 0, "", imageTexture, imageColor);
-		} 
+			AddScriptedMarker(zoneName, "0 0 0", 0, "", imageTexture, 45, imageColor);
+		}
 	}
 	
 	//------------------------------------------------------------------------------------------------
@@ -102,16 +103,16 @@ class CRF_GameModePlayerComponent: ScriptComponent
 	//! \param[in] markerText is the text that will be displayed on the map just under the image.
 	//! \param[in] markerImage is the image that will be displayed on the map.
 	//! \param[in] markerColor is the color the image will be.
-	void AddScriptedMarker(string markerEntityName, vector markerOffset, int timeDelay, string markerText, string markerImage, int markerColor)
+	void AddScriptedMarker(string markerEntityName, vector markerOffset, int timeDelay, string markerText, string markerImage, int zOrder, int markerColor)
 	{
-		m_aScriptedMarkers.Insert(string.Format("%1||%2||%3||%4||%5|%6", markerEntityName, markerOffset.ToString(), timeDelay.ToString(), markerText, markerImage, markerColor));
+		m_aScriptedMarkers.Insert(string.Format("%1||%2||%3||%4||%5||%6||%7", markerEntityName, markerOffset.ToString(), timeDelay.ToString(), markerText, markerImage, zOrder.ToString(), markerColor.ToString()));
 	}
 
 	//------------------------------------------------------------------------------------------------
 	//! !LOCAL! Removes the scripted marker from the users map, must have all params be the same params that were initially put in the AddScriptedMarkers function
-	void RemoveScriptedMarker(string markerEntityName, vector markerOffset, int timeDelay, string markerText, string markerImage, int markerColor)
+	void RemoveScriptedMarker(string markerEntityName, vector markerOffset, int timeDelay, string markerText, string markerImage, int zOrder, int markerColor)
 	{
-		m_aScriptedMarkers.RemoveItem(string.Format("%1||%2||%3||%4||%5||%6", markerEntityName, markerOffset.ToString(), timeDelay.ToString(), markerText, markerImage, markerColor));
+		m_aScriptedMarkers.RemoveItem(string.Format("%1||%2||%3||%4||%5||%6||%7", markerEntityName, markerOffset.ToString(), timeDelay.ToString(), markerText, markerImage, zOrder.ToString(), markerColor.ToString()));
 	}
 	
 	//------------------------------------------------------------------------------------------------
