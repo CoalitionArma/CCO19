@@ -101,8 +101,6 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 		GetGame().GetCallqueue().Remove(StartGame);
 		
 		GetGame().GetCallqueue().CallLater(ResetMessage, 6000);
-		
-		GetGame().GetCallqueue().CallLater(UnlockZone, 1000, true, 1, 1200);
 	}
 	
 	//------------------------------------------------------------------------------------------------
@@ -294,7 +292,7 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 	void UnlockZone(int zoneIndex, int countDown, string textName, string side)
 	{
 		// Finished
-		if (timeToUnlock <= 0) 
+		if (countDown <= 0) 
 		{
 			hudMessage = textName + " is now unlocked!";
 			int aZoneCountdown = 1200;

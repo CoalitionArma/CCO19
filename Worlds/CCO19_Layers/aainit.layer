@@ -44,8 +44,22 @@ PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_Game
  m_iReconnectTime -1
  m_bRemoveSquadMarkers 1
  m_iFreezeTime 0
+ m_aFactionRespawnCount {
+  PS_FactionRespawnCount "{620C0C248815814C}" {
+   m_sFactionKey "US"
+   m_iCount 300
+   m_iTime 120000
+   m_bWaveMode 1
+  }
+  PS_FactionRespawnCount "{620C0C248730C5D5}" {
+   m_sFactionKey "USSR"
+   m_iCount 300
+   m_iTime 120000
+   m_bWaveMode 1
+  }
+ }
  {
-  SCR_FactionManager {
+  SCR_FactionManager "620C0C24DAE1BBCD" {
    ID "5ED9088735FF2D8B"
    Factions {
     SCR_Faction "{56DEAC40D2DBC8B1}" {
