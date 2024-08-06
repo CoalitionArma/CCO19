@@ -34,7 +34,7 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 	string hudMessage;
 	
 	int m_iInitialTime = 60;
-	int m_iTimeToWin = 60;
+	int m_iTimeToWin = 180;
 	bool m_bGameStarted = false;
 	int m_iZoneCaptureInProgress = -1;
 	int zoneCountdown = 60;
@@ -130,6 +130,8 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 		
 		int zonesCapturedBlufor;
 		int zonesCapturedOpfor;
+		int zonesFullyCapturedBlufor;
+		int zonesFullyCapturedOpfor;
 		
 		foreach(int i, string zoneName : m_aZoneObjectNames)
 		{
@@ -163,11 +165,17 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 			string zoneState = zoneStatusArray[1];
 			FactionKey zoneFactionStored = zoneStatusArray[2];
 			
-			if(zoneFactionStored == bluforSide)
+			if(zoneFaction == bluforSide)
 				zonesCapturedBlufor = zonesCapturedBlufor + 1;
 			
-			if(zoneFactionStored == opforSide)
+			if(zoneFaction == opforSide && zoneFaction)
 				zonesCapturedOpfor = zonesCapturedOpfor + 1;
+			
+			if(zoneFactionStored == bluforSide)
+				zonesFullyCapturedBlufor = zonesFullyCapturedBlufor + 1;
+		
+			if(zoneFactionStored == bluforSide)
+				zonesFullyCapturedOpfor = zonesFullyCapturedOpfor + 1;
 			
 			if (bluforInZone >= m_iMinNumberOfPlayersNeeded && opforInZone < (bluforInZone/2))
 			{
@@ -219,7 +227,8 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 			return;
 		};
 		
-		m_iTimeToWin = 120;
+		if(zonesFullyCapturedBlufor != m_aZoneObjectNames.Count() && zonesFullyCapturedOpfor != m_aZoneObjectNames.Count())
+			m_iTimeToWin = 180;
 	};
 	
 	//------------------------------------------------------------------------------------------------
@@ -361,8 +370,12 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 			else
 				hudMessage = zonePretty + " is now unlocked!";
 			
+			UpdateClients();
+			Replication.BumpMe();
+			
 			GetGame().GetCallqueue().CallLater(ResetMessage, 6850);
 			GetGame().GetCallqueue().Remove(UnlockZone);
+			return;
 		};
 
 		switch (zoneCountdown)
