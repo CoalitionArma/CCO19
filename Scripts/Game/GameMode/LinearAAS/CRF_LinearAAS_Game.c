@@ -10,13 +10,13 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 	FactionKey bluforSide;
 	
 	[Attribute("SFRV", "auto", "Nickname for the side designated as blufor", category: "Linear AAS Player Settings")]
-	FactionKey bluforSideNickname;
+	string bluforSideNickname;
 	
 	[Attribute("USSR", "auto", "The side designated as opfor", category: "Linear AAS Player Settings")]
 	FactionKey opforSide;
 	
 	[Attribute("OCP", "auto", "Nickname for the side designated as blufor", category: "Linear AAS Player Settings")]
-	FactionKey opforSideNickname;
+	string opforSideNickname;
 	
 	[Attribute("", UIWidgets.EditBox, desc: "Array of all zone object names", category: "Linear AAS Zone Settings")]
 	ref array<string> m_aZoneObjectNames;
@@ -34,6 +34,13 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 	string hudMessage;
 	
 	int InitialTime = 20;
+	
+	// Zone countdown vars 
+	int aZoneCountdown = 1200;
+	int bZoneCountdown = 1200;
+	int cZoneCountdown = 1200;
+	int dZoneCountdown = 1200;
+	int eZoneCountdown = 1200;
 	
 	//------------------------------------------------------------------------------------------------
 
@@ -94,6 +101,8 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 		GetGame().GetCallqueue().Remove(StartGame);
 		
 		GetGame().GetCallqueue().CallLater(ResetMessage, 6000);
+		
+		GetGame().GetCallqueue().CallLater(UnlockZone, 1000, true, 1, 1200);
 	}
 	
 	//------------------------------------------------------------------------------------------------
@@ -197,10 +206,45 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 		if (zoneState == "Locked" || (zoneFaction == side && zoneState == "Unlocked")) 
 			return;
 		
-		if(zoneState.ToInt() >= 60) 
+		if(zoneState.ToInt() >= 60) // Zone officially captured
 		{
 			m_aZonesStatus.Set(zoneIndex, string.Format("%1:%2:%3", side, "Locked", side));
-			GetGame().GetCallqueue().CallLater(UnlockZone, 1000, true, zoneIndex, 20);
+			int countDown;
+			string textName;
+			switch (zoneIndex)
+			{
+				case 0:
+				{
+					countDown = aZoneCountdown;
+					textName = "A Site";
+					break;
+				};
+				case 1:
+				{
+					countDown = bZoneCountdown;
+					textName = "B Site";
+					break;
+				};
+				case 2:
+				{
+					countDown = cZoneCountdown;
+					textName = "C Site";
+					break;
+				};
+				case 3:
+				{
+					countDown = dZoneCountdown;
+					textName = "D Site";
+					break;
+				};
+				case 4:
+				{
+					countDown = eZoneCountdown;
+					textName = "E Site";
+					break;
+				};
+			} 
+			GetGame().GetCallqueue().CallLater(UnlockZone, 1000, true, zoneIndex, countDown, textName, side);
 			ZoneCaptured(zoneIndex, side);
 			return;
 		};
@@ -247,10 +291,48 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 		Replication.BumpMe();
 	}
 	
-	void UnlockZone(int zoneIndex, int timeToUnlock)
+	void UnlockZone(int zoneIndex, int countDown, string textName, string side)
 	{
-	
-	
+		// Finished
+		if (timeToUnlock <= 0) 
+		{
+			hudMessage = textName + " is now unlocked!";
+			int aZoneCountdown = 1200;
+			int bZoneCountdown = 1200;
+			int cZoneCountdown = 1200;
+			int dZoneCountdown = 1200;
+			int eZoneCountdown = 1200;
+			
+			m_aZonesStatus.Set(zoneIndex, string.Format("%1:%2:%3", side, "Unlocked", side));
+			Replication.BumpMe();
+		}
+		
+		// Adjust the text for site unlock every 5 mins
+		if (Math.Mod(countDown, 300) == 0) {
+			switch (countDown)
+			{
+				case 1200: {
+					hudMessage = textName + " unlocks in 20 minute(s)";
+					break;
+				};
+				case 900: {
+					hudMessage = textName + " unlocks in 15 minute(s)";
+					break;
+				};
+				case 600: {
+					hudMessage = textName + " unlocks in 10 minute(s)";
+					break;
+				};
+				case 300: {
+					hudMessage = textName + " unlocks in 5 minute(s)";
+					break;
+				}
+			}			
+			Replication.BumpMe();
+		}
+			
+		// countDown
+		countDown--;
 	}
 	
 	//------------------------------------------------------------------------------------------------
