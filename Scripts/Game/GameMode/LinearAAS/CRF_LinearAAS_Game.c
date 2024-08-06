@@ -30,17 +30,14 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 	// - All players withing a zones range
 	ref array<SCR_ChimeraCharacter> m_aAllPlayersWithinZoneRange = new array<SCR_ChimeraCharacter>;
 	
-	[RplProp()]
+	[RplProp(onRplName: "UpdateClients")]
 	string hudMessage;
 	
-	int InitialTime = 20;
-	
-	// Zone countdown vars 
-	int aZoneCountdown = 1200;
-	int bZoneCountdown = 1200;
-	int cZoneCountdown = 1200;
-	int dZoneCountdown = 1200;
-	int eZoneCountdown = 1200;
+	int m_iInitialTime = 60;
+	int m_iTimeToWin = 60;
+	bool m_bGameStarted = false;
+	int m_iZoneCaptureInProgress = -1;
+	int zoneCountdown = 60;
 	
 	//------------------------------------------------------------------------------------------------
 
@@ -84,23 +81,24 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 		if(safestart.GetSafestartStatus() || !SCR_BaseGameMode.Cast(GetGame().GetGameMode()).IsRunning())
 			return;
 		
-		if(InitialTime != 0)
+		if(m_iInitialTime != 0)
 		{
-			m_aZonesStatus.Set(((m_aZonesStatus.Count()-1)/2), string.Format("%1:%2:%3", "N/A", InitialTime, "N/A"));
-			hudMessage = string.Format("Zone C Unlocked: %1", SCR_FormatHelper.FormatTime(InitialTime));
-			InitialTime = InitialTime - 1;
+			m_aZonesStatus.Set(((m_aZonesStatus.Count()-1)/2), string.Format("%1:%2:%3", "N/A", m_iInitialTime, "N/A"));
+			hudMessage = string.Format("Zone C Unlocked: %1", SCR_FormatHelper.FormatTime(m_iInitialTime));
+			m_iInitialTime = m_iInitialTime - 1;
 			Replication.BumpMe();
 			return;
-		}	
+		};
 		
 		m_aZonesStatus.Set(((m_aZonesStatus.Count()-1)/2), string.Format("%1:%2:%3", "N/A", "Unlocked", "N/A"));
 		hudMessage = "Zone C Unlocked!";
+		m_bGameStarted = true;
 		UpdateClients();
 		Replication.BumpMe();
 		
 		GetGame().GetCallqueue().Remove(StartGame);
 		
-		GetGame().GetCallqueue().CallLater(ResetMessage, 6000);
+		GetGame().GetCallqueue().CallLater(ResetMessage, 6850);
 	}
 	
 	//------------------------------------------------------------------------------------------------
@@ -127,8 +125,11 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 	protected void UpdateZones()
 	{
 		CRF_SafestartGameModeComponent safestart = CRF_SafestartGameModeComponent.GetInstance();
-		if(safestart.GetSafestartStatus() || !SCR_BaseGameMode.Cast(GetGame().GetGameMode()).IsRunning())
+		if(safestart.GetSafestartStatus() || !SCR_BaseGameMode.Cast(GetGame().GetGameMode()).IsRunning() || !m_bGameStarted)
 			return;
+		
+		int zonesCapturedBlufor;
+		int zonesCapturedOpfor;
 		
 		foreach(int i, string zoneName : m_aZoneObjectNames)
 		{
@@ -151,7 +152,7 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 				
 				if(player.GetFactionKey() == opforSide)
 					opforInZone = opforInZone + 1;
-			};
+			}
 			
 			string status = m_aZonesStatus[i];
 			
@@ -162,17 +163,23 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 			string zoneState = zoneStatusArray[1];
 			FactionKey zoneFactionStored = zoneStatusArray[2];
 			
+			if(zoneFactionStored == bluforSide)
+				zonesCapturedBlufor = zonesCapturedBlufor + 1;
+			
+			if(zoneFactionStored == opforSide)
+				zonesCapturedOpfor = zonesCapturedOpfor + 1;
+			
 			if (bluforInZone >= m_iMinNumberOfPlayersNeeded && opforInZone < (bluforInZone/2))
 			{
 				CheckStartCaptureZone(i, bluforSide, zoneFaction, zoneState, zoneFactionStored);
-				return;
-			}
+				continue;
+			};
 			
 			if (opforInZone >= m_iMinNumberOfPlayersNeeded && bluforInZone < (opforInZone/2)) 
 			{
 				CheckStartCaptureZone(i, opforSide, zoneFaction, zoneState, zoneFactionStored);
-				return;
-			}
+				continue;
+			};
 			
 			if(zoneState.ToInt() != 0)  
 			{
@@ -180,7 +187,39 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 				UpdateClients();
 				Replication.BumpMe();
 			};
+		}
+		
+		if(zonesCapturedBlufor == m_aZoneObjectNames.Count())
+		{
+			m_iTimeToWin = m_iTimeToWin - 1;
+			
+			if(m_iTimeToWin <= 0)
+				hudMessage = string.Format("%1 Vicory!", bluforSideNickname);
+			else
+				hudMessage = string.Format("%1 Vicory In: %2", bluforSideNickname, SCR_FormatHelper.FormatTime(m_iTimeToWin));
+			
+			UpdateClients();
+			Replication.BumpMe();
+			
+			return;
 		};
+		
+		if(zonesCapturedOpfor == m_aZoneObjectNames.Count())
+		{
+			m_iTimeToWin = m_iTimeToWin - 1;
+
+			if(m_iTimeToWin <= 0)
+				hudMessage = string.Format("%1 Vicory!", opforSideNickname);
+			else
+				hudMessage = string.Format("%1 Vicory In: %2", opforSideNickname, SCR_FormatHelper.FormatTime(m_iTimeToWin));
+			
+			UpdateClients();
+			Replication.BumpMe();
+			
+			return;
+		};
+		
+		m_iTimeToWin = 120;
 	};
 	
 	//------------------------------------------------------------------------------------------------
@@ -201,52 +240,19 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 	//------------------------------------------------------------------------------------------------
 	protected void CheckStartCaptureZone(int zoneIndex, FactionKey side, FactionKey zoneFaction, string zoneState, FactionKey zoneFactionStored)
 	{	
-		if (zoneState == "Locked" || (zoneFaction == side && zoneState == "Unlocked")) 
+		if (zoneState == "Locked" || (zoneFaction == side && zoneState == "Unlocked") || ((m_iZoneCaptureInProgress != zoneIndex) && (m_iZoneCaptureInProgress != -1))) 
 			return;
 		
 		if(zoneState.ToInt() >= 60) // Zone officially captured
 		{
 			m_aZonesStatus.Set(zoneIndex, string.Format("%1:%2:%3", side, "Locked", side));
-			int countDown;
-			string textName;
-			switch (zoneIndex)
-			{
-				case 0:
-				{
-					countDown = aZoneCountdown;
-					textName = "A Site";
-					break;
-				};
-				case 1:
-				{
-					countDown = bZoneCountdown;
-					textName = "B Site";
-					break;
-				};
-				case 2:
-				{
-					countDown = cZoneCountdown;
-					textName = "C Site";
-					break;
-				};
-				case 3:
-				{
-					countDown = dZoneCountdown;
-					textName = "D Site";
-					break;
-				};
-				case 4:
-				{
-					countDown = eZoneCountdown;
-					textName = "E Site";
-					break;
-				};
-			} 
-			GetGame().GetCallqueue().CallLater(UnlockZone, 1000, true, zoneIndex, countDown, textName, side);
+			
 			ZoneCaptured(zoneIndex, side);
+			m_iZoneCaptureInProgress = -1;
 			return;
 		};
 		 
+		m_iZoneCaptureInProgress = zoneIndex;
 		m_aZonesStatus.Set(zoneIndex, string.Format("%1:%2:%3", side, zoneState.ToInt() + 1, zoneFactionStored));
 		
 		UpdateClients();
@@ -259,6 +265,7 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 		string zonePretty;
 		string nickname;
 		int zoneIndexToChange;
+		int zoneIndexBehind;
 			
 		switch(zoneIndex)
 		{
@@ -271,66 +278,146 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 			
 		switch(side)
 		{
-			case bluforSide : { nickname = bluforSideNickname; zoneIndexToChange = zoneIndex + 1; break;}; //Blufor
-			case opforSide  : { nickname = opforSideNickname;  zoneIndexToChange = zoneIndex - 1; break;}; //Opfor
+			case bluforSide : { nickname = bluforSideNickname; zoneIndexToChange = zoneIndex + 1; zoneIndexBehind = zoneIndex - 1; break;}; //Blufor
+			case opforSide  : { nickname = opforSideNickname;  zoneIndexToChange = zoneIndex - 1; zoneIndexBehind = zoneIndex + 1; break;}; //Opfor
 		}
 		
 		hudMessage = string.Format("%1 Captured Zone %2!", nickname, zonePretty);
+		Replication.BumpMe();
 		
-		GetGame().GetCallqueue().CallLater(ResetMessage, 6000);
+		GetGame().GetCallqueue().CallLater(ResetMessage, 6850);
+		
+		if(zoneIndexBehind > (m_aZoneObjectNames.Count() - 1) || zoneIndexBehind < 0)
+			return;	
+		
+		string zoneBehindToChange = m_aZonesStatus.Get(zoneIndexBehind);
+		
+		array<string> zoneStatusBehindArray = {};
+		zoneBehindToChange.Split(":", zoneStatusBehindArray, false);
+		
+		m_aZonesStatus.Set(zoneIndexBehind, string.Format("%1:%2:%3", zoneStatusBehindArray[0], "Locked", zoneStatusBehindArray[2]));
+		
+		if(zoneIndexToChange > (m_aZoneObjectNames.Count() - 1) || zoneIndexToChange < 0)
+		{
+			GetGame().GetCallqueue().CallLater(UnlockZone, 1000, true, zoneIndex, zoneIndex);
+			return;	
+		};
 		
 		string zoneStatusToChange = m_aZonesStatus.Get(zoneIndexToChange);
 		
 		array<string> zoneStatusToChangeArray = {};
 		zoneStatusToChange.Split(":", zoneStatusToChangeArray, false);
 		
-		m_aZonesStatus.Set(zoneIndexToChange, string.Format("%1:%2:%3", zoneStatusToChangeArray[0], "Unlocked", zoneStatusToChangeArray[2]));
+		m_aZonesStatus.Set(zoneIndexToChange, string.Format("%1:%2:%3", zoneStatusToChangeArray[0], "Locked", zoneStatusToChangeArray[2]));
+		
+		GetGame().GetCallqueue().CallLater(UnlockZone, 1000, true, zoneIndex, zoneIndexToChange);
 		UpdateClients();
-		Replication.BumpMe();
 	}
 	
-	void UnlockZone(int zoneIndex, int countDown, string textName, string side)
-	{
-		// Finished
-		if (countDown <= 0) 
+	void UnlockZone(int zoneIndex, int zoneIndexTwo)
+	{	
+		if (zoneCountdown > 0) 
+			zoneCountdown = zoneCountdown - 1;
+		
+		string zonePretty;
+		string zonePrettyTwo;
+		
+		switch(zoneIndex)
 		{
-			hudMessage = textName + " is now unlocked!";
-			int aZoneCountdown = 1200;
-			int bZoneCountdown = 1200;
-			int cZoneCountdown = 1200;
-			int dZoneCountdown = 1200;
-			int eZoneCountdown = 1200;
-			
-			m_aZonesStatus.Set(zoneIndex, string.Format("%1:%2:%3", side, "Unlocked", side));
-			Replication.BumpMe();
+			case 0 : {zonePretty = "Zone A"; break;};
+			case 1 : {zonePretty = "Zone B"; break;};
+			case 2 : {zonePretty = "Zone C"; break;};
+			case 3 : {zonePretty = "Zone D"; break;};
+			case 4 : {zonePretty = "Zone E"; break;};
 		}
 		
-		// Adjust the text for site unlock every 5 mins
-		if (Math.Mod(countDown, 300) == 0) {
-			switch (countDown)
-			{
-				case 1200: {
-					hudMessage = textName + " unlocks in 20 minute(s)";
-					break;
-				};
-				case 900: {
-					hudMessage = textName + " unlocks in 15 minute(s)";
-					break;
-				};
-				case 600: {
-					hudMessage = textName + " unlocks in 10 minute(s)";
-					break;
-				};
-				case 300: {
-					hudMessage = textName + " unlocks in 5 minute(s)";
-					break;
-				}
-			}			
-			Replication.BumpMe();
+		switch(zoneIndexTwo)
+		{
+			case 0 : {zonePrettyTwo = "Zone A"; break;};
+			case 1 : {zonePrettyTwo = "Zone B"; break;};
+			case 2 : {zonePrettyTwo = "Zone C"; break;};
+			case 3 : {zonePrettyTwo = "Zone D"; break;};
+			case 4 : {zonePrettyTwo = "Zone E"; break;};
 		}
+		
+		if(zoneCountdown <= 0)
+		{
+			zoneCountdown = 60;
 			
-		// countDown
-		countDown--;
+			string status = m_aZonesStatus[zoneIndex];
+			array<string> zoneStatusArray = {};
+			status.Split(":", zoneStatusArray, false);
+		
+			m_aZonesStatus.Set(zoneIndex, string.Format("%1:%2:%3", zoneStatusArray[2], "Unlocked", zoneStatusArray[2]));
+		
+			string statusTwo = m_aZonesStatus[zoneIndexTwo];
+			array<string> zoneStatusTwoArray = {};
+			statusTwo.Split(":", zoneStatusTwoArray, false);
+		
+			m_aZonesStatus.Set(zoneIndexTwo, string.Format("%1:%2:%3", zoneStatusTwoArray[2], "Unlocked", zoneStatusTwoArray[2]));
+			 
+			if(zonePretty != zonePrettyTwo)
+				hudMessage = zonePretty + " & " + zonePrettyTwo + " are now unlocked!";
+			else
+				hudMessage = zonePretty + " is now unlocked!";
+			
+			GetGame().GetCallqueue().CallLater(ResetMessage, 6850);
+			GetGame().GetCallqueue().Remove(UnlockZone);
+		};
+
+		switch (zoneCountdown)
+		{
+			case 1200: {
+				if(zonePretty != zonePrettyTwo)
+					hudMessage = zonePretty + " & " + zonePrettyTwo + " unlocks in 20 minute(s)";
+				else
+					hudMessage = zonePretty + " unlocks in 20 minute(s)";
+				GetGame().GetCallqueue().CallLater(ResetMessage, 6850);
+				break;
+			};
+			case 900: {
+			if(zonePretty != zonePrettyTwo)
+					hudMessage = zonePretty + " & " + zonePrettyTwo + " unlocks in 15 minute(s)";
+				else
+					hudMessage = zonePretty + " unlocks in 15 minute(s)";
+				GetGame().GetCallqueue().CallLater(ResetMessage, 6850);
+				break;
+			};
+			case 600: {
+				if(zonePretty != zonePrettyTwo)
+					hudMessage = zonePretty + " & " + zonePrettyTwo + " unlocks in 10 minute(s)";
+				else
+					hudMessage = zonePretty + " unlocks in 10 minute(s)";
+				GetGame().GetCallqueue().CallLater(ResetMessage, 6850);
+				break;
+			};
+			case 300: {
+				if(zonePretty != zonePrettyTwo)
+					hudMessage = zonePretty + " & " + zonePrettyTwo + " unlocks in 5 minute(s)";
+				else
+					hudMessage = zonePretty + " unlocks in 5 minute(s)";
+				GetGame().GetCallqueue().CallLater(ResetMessage, 6850);
+				break;
+			}
+			case 60: {
+				if(zonePretty != zonePrettyTwo)
+					hudMessage = zonePretty + " & " + zonePrettyTwo + " unlocks in 1 minute";
+				else
+					hudMessage = zonePretty + " unlocks in 1 minute";
+				GetGame().GetCallqueue().CallLater(ResetMessage, 6850);
+				break;
+			}
+			case 15: {
+				if(zonePretty != zonePrettyTwo)
+					hudMessage = zonePretty + " & " + zonePrettyTwo + " unlocks in 15 seconds!";
+				else
+					hudMessage = zonePretty + " unlocks in 15 seconds!";
+				GetGame().GetCallqueue().CallLater(ResetMessage, 6850);
+				break;
+			}
+		}
+		UpdateClients();
+		Replication.BumpMe();
 	}
 	
 	//------------------------------------------------------------------------------------------------

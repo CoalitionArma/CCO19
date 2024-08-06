@@ -20,7 +20,7 @@ SCR_PlayerController {
     }
     CRF_LinearAAS_UI "{6208FDBA4CA53A90}" {
      m_LayoutPath "{57C8559AEDAEFF2D}UI/layouts/CCO19_OBJ.layout"
-     m_eLayer HIGH
+     m_eLayer ALWAYS_TOP
     }
    }
   }
