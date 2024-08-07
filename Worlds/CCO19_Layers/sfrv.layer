@@ -1,0 +1,405 @@
+$grp SCR_VehicleSpawn {
+ {
+  coords 13699.896 25.779 5639.05
+  angleX -3.551
+  angleY 4
+  angleZ 4.478
+  m_rnPrefab "{F85D2B45C2EF3B8C}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_SFRV_transport_covered.et"
+  respawnDelay 300
+  firstSpawn 2
+ }
+ {
+  coords 13693.688 25.651 5639.157
+  angleX -3.551
+  angleY 4
+  angleZ 4.478
+  m_rnPrefab "{F85D2B45C2EF3B8C}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_SFRV_transport_covered.et"
+  respawnDelay 300
+  firstSpawn 2
+ }
+ {
+  coords 13687.9 25.562 5639.425
+  angleX -3.551
+  angleY 4
+  angleZ 4.478
+  m_rnPrefab "{F85D2B45C2EF3B8C}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_SFRV_transport_covered.et"
+  respawnDelay 300
+  firstSpawn 2
+ }
+ {
+  coords 13679.632 25.497 5639.096
+  angleX -3.551
+  angleY 4
+  angleZ 4.478
+  m_rnPrefab "{F85D2B45C2EF3B8C}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_SFRV_transport_covered.et"
+  respawnDelay 300
+  firstSpawn 2
+ }
+ {
+  coords 13664.526 25.562 5656.254
+  angleX -3.551
+  angleY 91
+  angleZ 4.478
+  m_rnPrefab "{F85D2B45C2EF3B8C}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_SFRV_transport_covered.et"
+  respawnDelay 300
+  firstSpawn 2
+ }
+ {
+  coords 13664.724 25.631 5662.273
+  angleX -3.551
+  angleY 91
+  angleZ 4.478
+  m_rnPrefab "{F85D2B45C2EF3B8C}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_SFRV_transport_covered.et"
+  respawnDelay 300
+  firstSpawn 2
+ }
+ {
+  coords 13664.374 25.686 5668.553
+  angleX -3.551
+  angleY 91
+  angleZ 4.478
+  m_rnPrefab "{F85D2B45C2EF3B8C}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_SFRV_transport_covered.et"
+  respawnDelay 300
+  firstSpawn 2
+ }
+ {
+  coords 13664.487 25.723 5674.019
+  angleX -3.551
+  angleY 91
+  angleZ 4.478
+  m_rnPrefab "{F85D2B45C2EF3B8C}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_SFRV_transport_covered.et"
+  respawnDelay 300
+  firstSpawn 2
+ }
+ {
+  coords 13665.035 25.749 5681.469
+  angleX -3.551
+  angleY 91
+  angleZ 4.478
+  m_rnPrefab "{AC57BD7756CA3179}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_SFRV.et"
+  respawnDelay 300
+  firstSpawn 2
+ }
+ {
+  coords 13664.787 25.775 5686.348
+  angleX -3.551
+  angleY 91
+  angleZ 4.478
+  m_rnPrefab "{AC57BD7756CA3179}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_SFRV.et"
+  respawnDelay 300
+  firstSpawn 2
+ }
+ {
+  coords 13723.376 26.264 5659.689
+  angleX -3.551
+  angleY 91
+  angleZ 4.478
+  m_rnPrefab "{DE0D28D07117ED9A}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_SFRV_tanker.et"
+  respawnDelay 300
+  firstSpawn 2
+ }
+ {
+  coords 13724.151 26.255 5664.241
+  angleX -3.551
+  angleY 91
+  angleZ 4.478
+  m_rnPrefab "{DE0D28D07117ED9A}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_SFRV_tanker.et"
+  respawnDelay 300
+  firstSpawn 2
+ }
+ {
+  coords 13724.414 26.25 5669.175
+  angleX -3.551
+  angleY 91
+  angleZ 4.478
+  m_rnPrefab "{23F285C0F4872ADC}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_SFRV_ammo.et"
+  respawnDelay 300
+  firstSpawn 2
+ }
+ {
+  coords 13724.903 26.247 5673.739
+  angleX -3.551
+  angleY 91
+  angleZ 4.478
+  m_rnPrefab "{23F285C0F4872ADC}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_SFRV_ammo.et"
+  respawnDelay 300
+  firstSpawn 2
+ }
+ {
+  coords 13724.94 26.242 5679.861
+  angleX -3.551
+  angleY 91
+  angleZ 4.478
+  m_rnPrefab "{29F93BC5F856C7E3}Prefabs/Vehicles/Wheeled/BTR70/BTR70_SFRV.et"
+  respawnDelay 900
+  firstSpawn 2
+ }
+ {
+  coords 13725.075 26.244 5684.663
+  angleX -3.551
+  angleY 91
+  angleZ 4.478
+  m_rnPrefab "{29F93BC5F856C7E3}Prefabs/Vehicles/Wheeled/BTR70/BTR70_SFRV.et"
+  respawnDelay 900
+  firstSpawn 2
+ }
+ {
+  coords 13725.601 26.272 5690.036
+  angleX -3.551
+  angleY 91
+  angleZ 4.478
+  m_rnPrefab "{596CE7E3D70051F7}T-55/T55_SFRV.et"
+  respawnDelay 900
+  firstSpawn 2
+ }
+ {
+  coords 13725.981 26.297 5695.782
+  angleX -3.551
+  angleY 91
+  angleZ 4.478
+  m_rnPrefab "{596CE7E3D70051F7}T-55/T55_SFRV.et"
+  respawnDelay 900
+  firstSpawn 2
+ }
+ {
+  coords 13706.595 26.02 5727.301
+  angleX -3.551
+  angleY -179
+  angleZ 4.478
+  m_rnPrefab "{43C4AF1EEBD001CE}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_ambulance.et"
+  respawnDelay 300
+  firstSpawn 2
+ }
+ {
+  coords 13706.774 26.242 5735.136
+  angleX -3.551
+  angleY -179
+  angleZ 4.478
+  m_rnPrefab "{43C4AF1EEBD001CE}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_ambulance.et"
+  respawnDelay 300
+  firstSpawn 2
+ }
+}
+SCR_AIGroup : "{33F26A968F19B70E}Prefabs/Groups/SFRV/Group_SFRV_COY_P.et" {
+ coords 13692.089 25.658 5708.147
+ m_aUnitPrefabSlots {
+  "{589534EDC46E19F0}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Leader_COY_P.et" "{CB0040615951F316}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_MO_P.et"
+ }
+ m_sCustomNameSet "Company Command"
+ {
+  SCR_AIGroup : "{6ED93B4C372278B3}Prefabs/Groups/SFRV/Group_SFRV_PLT_P.et" {
+   coords -0.495 -0.105 -9.02
+   {
+    $grp SCR_AIGroup : "{21F4A61107527C66}Prefabs/Groups/SFRV/Group_SFRV_RifleSquad_P.et" {
+     {
+      coords 75.13 1.943 22.084
+     }
+     {
+      coords 75.821 2.213 -9.662
+      m_sCustomNameSet "2nd Squad"
+     }
+     {
+      coords 125.532 7.219 11.908
+      m_aUnitPrefabSlots {
+       "{2946C9CC4AAC01A2}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Leader_Base_SL_P.et" "{227B26E0BF7CD3F5}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_Medic_P.et" "{B4CE670379CB41D5}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Leader_TL_P.et" "{931A049EE0D98F24}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_MMG_P.et" "{6DCF7D1A0E5566AB}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_AMMG_P.et" "{B4CE670379CB41D5}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Leader_TL_P.et" "{BBA79D98B23826A3}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_MAT_P.et" "{343CE437EE1F39AF}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_MATA_P.et" "{3B5BDB7A523E4810}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_Base_P.et" "{3B5BDB7A523E4810}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_Base_P.et"
+      }
+      m_sCustomNameSet "3rd Squad"
+     }
+     {
+      coords 116.51 6.342 -16.497
+      m_sCustomNameSet "4th Squad"
+      {
+       SCR_AIGroup : "{7BD47C6018CBD3E2}Prefabs/Groups/SFRV/Group_SFRV_Recce_P.et" {
+        coords 25.562 2.449 5.271
+        m_sCustomNameSet "5th Squad"
+        {
+         SCR_AIGroup : "{FC907A6FC4E7165B}Prefabs/Groups/SFRV/Group_SFRV_WeaponSquad_P.et" {
+          coords -139.816 -8.867 -16.432
+          m_aUnitPrefabSlots {
+           "{237613C534F7EEC0}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_VehicleCommander_P.et" "{5606DC190F4847CD}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_VehicleDriver_P.et" "{237613C534F7EEC0}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_VehicleCommander_P.et" "{5606DC190F4847CD}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_VehicleDriver_P.et" "{237613C534F7EEC0}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_VehicleCommander_P.et" "{5606DC190F4847CD}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_VehicleDriver_P.et" "{237613C534F7EEC0}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_VehicleCommander_P.et" "{5606DC190F4847CD}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_VehicleDriver_P.et"
+          }
+          m_sCustomNameSet "Armor"
+          {
+           SCR_AIGroup : "{99B5AA8CE9847849}Prefabs/Groups/SFRV/Group_SFRV_Arty_P.et" {
+            coords 16.613 0.411 28.287
+            {
+             SCR_AIGroup : "{25BB7D017D0E74D9}Prefabs/Groups/SFRV/Group_SFRV_Logistics_P.et" {
+              coords 8.497 0.26 2.259
+              m_aUnitPrefabSlots {
+               "{064FA95C04B3373F}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Leader_LogiLead_P.et" "{F5838A4A846944E4}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_LogiRunner_P.et" "{F5838A4A846944E4}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_LogiRunner_P.et"
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{68ED84218EA1BDC3}Prefabs/Compositions/Slotted/SlotFlatSmall/Antenna_S_USSR_01.et" {
+ coords 13669.062 25.538 5699.76
+ {
+  GenericEntity {
+   ID "5D088D25691EE881"
+   coords 0 0 0
+   angleY 110
+  }
+ }
+}
+GenericEntity : "{69131FD53AF6C044}Prefabs/Compositions/Slotted/SlotFlatSmall/SupplyStorage_S_US_01.et" {
+ coords 13667.417 25.47 5644.132
+ angleY 61
+ angleZ 1.343
+ {
+  GenericEntity {
+   ID "58C28EA16E7B7C58"
+   components {
+    SCR_ResourceComponent "{5E5ABDF371AE8B21}" {
+     m_aContainers {
+      SCR_ResourceContainer "{620F17BA1A889189}" {
+       m_eResourceRights ALL
+       m_eStorageType STORED
+       m_fResourceValueCurrent 1000
+       m_fResourceValueMax 2000
+       m_bEnableResourceGain 1
+       m_fResourceGain 2
+       m_fResourceGainTickrate 10
+      }
+     }
+    }
+   }
+  }
+ }
+}
+$grp GenericEntity : "{77F90F896D5145C8}Prefabs/Compositions/Slotted/SlotFlatSmall/LivingArea_S_US_01.et" {
+ {
+  coords 13674.753 26.31 5731.255
+  angleY 142
+ }
+ {
+  coords 13671.644 26.207 5716.589
+  angleY 48
+ }
+ {
+  coords 13688.348 26.013 5727.331
+  angleY -134
+ }
+}
+GenericEntity : "{7C367E9261376345}Prefabs/Compositions/Slotted/SlotFlatSmall/AmmoStorage_S_US_01.et" {
+ coords 13678.729 25.766 5708.775
+ angleY 134
+ {
+  GenericEntity {
+   ID "5E330D6E0719D313"
+   components {
+    SCR_ResourceComponent "{5E3298BE225F0743}" {
+     m_aContainers {
+      SCR_ResourceContainer "{620F17A015E6D081}" {
+       m_eResourceRights ALL
+       m_eStorageType STORED
+       m_fResourceValueCurrent 500
+       m_fResourceValueMax 500
+      }
+     }
+    }
+   }
+  }
+  GenericEntity {
+   ID "5D06E957D85806FB"
+   {
+    GenericEntity {
+     ID "5D371ACBFA947460"
+     components {
+      SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
+       m_eSupportedArsenalItemTypes 262782
+       m_eSupportedArsenalItemModes 48
+       m_eEditableAttributeGroups AMMUNITION_MODE
+      }
+     }
+    }
+   }
+  }
+  GenericEntity {
+   ID "5D06E957D858060A"
+   {
+    GenericEntity {
+     ID "5D371ACBE97B9E1F"
+     components {
+      SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
+       m_eSupportedArsenalItemTypes 262782
+       m_eSupportedArsenalItemModes 48
+       m_eEditableAttributeGroups AMMUNITION_MODE
+      }
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{891EF8A5FB7162F1}Prefabs/Props/Military/Arsenal/AmmoBoxes/US/AmmoBoxArsenal_Medical_US.et" {
+ coords 13723.68 26.53 5724.475
+ angleX -2.055
+ angleY -82.942
+ angleZ -1.606
+}
+GenericEntity : "{CDD0712FD6215F03}Prefabs/Compositions/Slotted/SlotFlatMedium/FieldHospital_M_US_01.et" {
+ coords 13721.676 26.6 5731.074
+ angleX -0.766
+ angleY -177.081
+ angleZ 1.849
+ {
+  GenericEntity {
+   ID "5D088D1F96898F2F"
+   {
+    DecalEntity {
+     ID "56DEFDB4A9499F9B"
+     coords 0 0 0
+     angleX -90
+     angleY 177.672
+     angleZ 177.316
+    }
+   }
+  }
+  GenericEntity {
+   ID "5E58A7FA2A6DFDA3"
+   {
+    GenericEntity {
+     ID "5E58A7FAF67EAED6"
+     components {
+      SCR_ResourceComponent "{5D8AA552F85C2FBB}" {
+       m_aContainers {
+        SCR_ResourceContainerVirtual "{5D8AA552C6324D54}" {
+         m_fResourceValueCurrent 500
+         m_fResourceValueMax 500
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
+$grp Turret : "{ECDC9FE2503E6152}M119/M119_fieldgun.et" {
+ {
+  coords 14260.629 61.324 5875.986
+  angleX -0.089
+  angleY 24.005
+  angleZ 0.938
+ }
+ {
+  coords 14279.503 61.454 5866.796
+  angleX -0.089
+  angleY 14.005
+  angleZ 0.938
+ }
+}
+GenericEntity : "{FB18EFE9C1A81E29}Prefabs/Compositions/Slotted/SlotFlatMedium/VehicleMaintenance_M_US_01.et" {
+ coords 13717.871 26.211 5642.548
+}

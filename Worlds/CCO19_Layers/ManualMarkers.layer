@@ -60,3 +60,105 @@ $grp PS_ManualMarker : "{7B677FB61E410D0D}PrefabsEditable/Markers/ObjectiveMarke
   m_bShowForAnyFaction 1
  }
 }
+$grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ {
+  coords 13666.349 25.427 5636.254
+  m_MarkerColor 0 0 0 1
+  m_sQuadName "dot"
+  m_fWorldSize 80
+  m_sDescription "Supplies"
+  m_aVisibleForFactions {
+   "US"
+  }
+ }
+ {
+  coords 13717.839 26.195 5644.569
+  m_MarkerColor 0 0 0 1
+  m_sQuadName "dot"
+  m_fWorldSize 80
+  m_sDescription "Maintenance"
+  m_aVisibleForFactions {
+   "US"
+  }
+ }
+ {
+  coords 13719.454 26.578 5727.095
+  m_MarkerColor 0 0 0 1
+  m_sQuadName "dot"
+  m_fWorldSize 80
+  m_sDescription "Medical"
+  m_aVisibleForFactions {
+   "US"
+  }
+ }
+ {
+  coords 13909.737 24.935 14671.494
+  m_MarkerColor 0 0 0 1
+  m_sQuadName "dot"
+  m_fWorldSize 80
+  m_sDescription "Supplies"
+  m_aVisibleForFactions {
+   "USSR"
+  }
+ }
+ {
+  coords 13936.353 27.658 14576.814
+  m_MarkerColor 0 0 0 1
+  m_sQuadName "dot"
+  m_fWorldSize 80
+  m_sDescription "Medical"
+  m_aVisibleForFactions {
+   "USSR"
+  }
+ }
+ {
+  coords 13698.591 25.521 5680.028
+  m_MarkerColor 0.02 0.008 0.632 1
+  m_sQuadName "flag-2"
+  m_fWorldSize 80
+  m_sDescription "MAIN"
+  m_aVisibleForFactions {
+   "US"
+  }
+ }
+ {
+  coords 13882.431 24.547 14610.18
+  m_MarkerColor 0.632 0.012 0.008 1
+  m_sQuadName "flag-2"
+  m_fWorldSize 80
+  m_sDescription "MAIN"
+  m_aVisibleForFactions {
+   "USSR"
+  }
+ }
+ {
+  coords 13930.3 25.706 14625.765
+  m_MarkerColor 0 0 0 1
+  m_sQuadName "dot"
+  m_fWorldSize 80
+  m_sDescription "Maintenance"
+  m_aVisibleForFactions {
+   "USSR"
+  }
+ }
+ {
+  coords 13905.349 25.669 14589.395
+  m_MarkerColor 0 0 0 1
+  m_sQuadName "dot"
+  m_fWorldSize 80
+  m_sDescription "Ammo"
+  m_aVisibleForFactions {
+   "USSR"
+  }
+ }
+ {
+  coords 13677.341 25.863 5710.454
+  m_MarkerColor 0 0 0 1
+  m_sQuadName "dot"
+  m_fWorldSize 80
+  m_sDescription "Ammo"
+  m_aVisibleForFactions {
+   "US"
+  }
+ }
+}
