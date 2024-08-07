@@ -61,13 +61,13 @@ class CRF_GameModePlayerComponent: ScriptComponent
 			string zoneLocked = zoneStatusArray[1];
 			FactionKey zoneFactionStored = zoneStatusArray[2];
 			
-			switch(zoneName)
+			switch(i)
 			{
-				case "aZone" : {imageTexture = "{E5AC2ABE05771CA1}UI\Objectives\A.edds"; break;};
-				case "bZone" : {imageTexture = "{BB4403FDBAFA92AE}UI\Objectives\B.edds"; break;};
-				case "cZone" : {imageTexture = "{4F4C4465B727FADA}UI\Objectives\C.edds"; break;};
-				case "dZone" : {imageTexture = "{0694517AC5E18EB0}UI\Objectives\D.edds"; break;};
-				case "eZone" : {imageTexture = "{F29C16E2C83CE6C4}UI\Objectives\E.edds"; break;};
+				case 0 : {imageTexture = "{E5AC2ABE05771CA1}UI\Objectives\A.edds"; break;};
+				case 1 : {imageTexture = "{BB4403FDBAFA92AE}UI\Objectives\B.edds"; break;};
+				case 2 : {imageTexture = "{4F4C4465B727FADA}UI\Objectives\C.edds"; break;};
+				case 3 : {imageTexture = "{0694517AC5E18EB0}UI\Objectives\D.edds"; break;};
+				case 4 : {imageTexture = "{F29C16E2C83CE6C4}UI\Objectives\E.edds"; break;};
 			}
 			
 			if(zoneLocked == "Locked")

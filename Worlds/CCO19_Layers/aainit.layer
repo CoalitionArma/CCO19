@@ -30,10 +30,10 @@ PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_Game
    m_aZoneObjectNames {
     "aZone" "bZone" "cZone" "dZone" "eZone"
    }
-   m_aZonesStatus {
-    "US:Locked:US" "US:Locked:US" "N/A:Locked:N/A" "USSR:Locked:USSR" "USSR:Locked:USSR"
-   }
-   m_iMinNumberOfPlayersNeeded 1
+   m_iZoneUnlockTime 1200
+   m_iMinNumberOfPlayersNeeded 10
+   m_iTimeToWin 1800
+   m_iInitialTime 1200
   }
   CRF_SafestartGameModeComponent "{61FD260E8973CC41}" {
    m_iTimeLimitMinutes 180

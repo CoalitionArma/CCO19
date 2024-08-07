@@ -31,20 +31,20 @@ class CRF_LinearAAS_UI : SCR_InfoDisplay
 		super.UpdateValues(owner, timeSlice);
 		
 		if (!m_GameModePlayerComponent || !m_LinearAASGameModeComponent || !m_wASite || !m_wBSite || !m_wCSite || !m_wDSite || !m_wESite || !m_wASiteLock || !m_wBSiteLock || !m_wCSiteLock || !m_wDSiteLock || !m_wESiteLock || !m_wSiteCaptureBar || !m_wSiteCaptureText) {
-			m_GameModePlayerComponent = CRF_GameModePlayerComponent.GetInstance();
+			m_GameModePlayerComponent    = CRF_GameModePlayerComponent.GetInstance();
 			m_LinearAASGameModeComponent = CRF_LinearAASGameModeComponent.GetInstance();
-			m_wASite           = ImageWidget.Cast(m_wRoot.FindWidget("ASite"));
-			m_wBSite           = ImageWidget.Cast(m_wRoot.FindWidget("BSite"));
-			m_wCSite           = ImageWidget.Cast(m_wRoot.FindWidget("CSite"));
-			m_wDSite           = ImageWidget.Cast(m_wRoot.FindWidget("DSite"));
-			m_wESite           = ImageWidget.Cast(m_wRoot.FindWidget("ESite"));
-			m_wASiteLock       = ImageWidget.Cast(m_wRoot.FindWidget("ASiteLock"));
-			m_wBSiteLock       = ImageWidget.Cast(m_wRoot.FindWidget("BSiteLock"));
-			m_wCSiteLock       = ImageWidget.Cast(m_wRoot.FindWidget("CSiteLock"));
-			m_wDSiteLock       = ImageWidget.Cast(m_wRoot.FindWidget("DSiteLock"));
-			m_wESiteLock       = ImageWidget.Cast(m_wRoot.FindWidget("ESiteLock"));
-			m_wSiteCaptureBar  = ProgressBarWidget.Cast(m_wRoot.FindWidget("SiteCaptureBar"));
-			m_wSiteCaptureText = TextWidget.Cast(m_wRoot.FindWidget("SiteCaptureText"));
+			m_wASite                     = ImageWidget.Cast(m_wRoot.FindWidget("ASite"));
+			m_wBSite                     = ImageWidget.Cast(m_wRoot.FindWidget("BSite"));
+			m_wCSite                     = ImageWidget.Cast(m_wRoot.FindWidget("CSite"));
+			m_wDSite                     = ImageWidget.Cast(m_wRoot.FindWidget("DSite"));
+			m_wESite                     = ImageWidget.Cast(m_wRoot.FindWidget("ESite"));
+			m_wASiteLock                 = ImageWidget.Cast(m_wRoot.FindWidget("ASiteLock"));
+			m_wBSiteLock                 = ImageWidget.Cast(m_wRoot.FindWidget("BSiteLock"));
+			m_wCSiteLock                 = ImageWidget.Cast(m_wRoot.FindWidget("CSiteLock"));
+			m_wDSiteLock                 = ImageWidget.Cast(m_wRoot.FindWidget("DSiteLock"));
+			m_wESiteLock                 = ImageWidget.Cast(m_wRoot.FindWidget("ESiteLock"));
+			m_wSiteCaptureBar            = ProgressBarWidget.Cast(m_wRoot.FindWidget("SiteCaptureBar"));
+			m_wSiteCaptureText           = TextWidget.Cast(m_wRoot.FindWidget("SiteCaptureText"));
 			return;
 		};
 		
@@ -54,7 +54,7 @@ class CRF_LinearAAS_UI : SCR_InfoDisplay
 		else
 			m_wRoot.SetOpacity(1);
 		
-		string siteCaptureBarText = m_LinearAASGameModeComponent.hudMessage;
+		string siteCaptureBarText = m_LinearAASGameModeComponent.m_sHudMessage;
 		m_wSiteCaptureText.SetText(siteCaptureBarText);
 		
 		m_bStoredProgressBarBoolean = false;
@@ -110,14 +110,14 @@ class CRF_LinearAAS_UI : SCR_InfoDisplay
 			
 			switch(zonefaction)
 			{
-				case m_LinearAASGameModeComponent.bluforSide : {
+				case m_LinearAASGameModeComponent.m_BluforSide : {
 					widget.SetColorInt(ARGB(255, 0, 25, 225)); 
-					nickname = m_LinearAASGameModeComponent.bluforSideNickname; 
+					nickname = m_LinearAASGameModeComponent.m_sBluforSideNickname; 
 					break;
 				}; //Blufor
-				case m_LinearAASGameModeComponent.opforSide  : {
+				case m_LinearAASGameModeComponent.m_OpforSide  : {
 					widget.SetColorInt(ARGB(255, 225, 25, 0)); 
-					nickname = m_LinearAASGameModeComponent.opforSideNickname;   
+					nickname = m_LinearAASGameModeComponent.m_sOpforSideNickname;   
 					break;
 				}; //Opfor
 				default : { 
@@ -136,16 +136,16 @@ class CRF_LinearAAS_UI : SCR_InfoDisplay
 				m_wSiteCaptureBar.SetCurrent(zoneState.ToInt());
 				m_bStoredProgressBarBoolean = true;
 				
-				if(zoneState.ToInt() > 60)
-					m_wSiteCaptureBar.SetMax(1200);
+				if(zoneState.ToInt() > m_LinearAASGameModeComponent.m_iZoneCaptureTime)
+					m_wSiteCaptureBar.SetMax(m_LinearAASGameModeComponent.m_iInitialTime); // Only other time we use the progress bar
 				else
-					m_wSiteCaptureBar.SetMax(60);
+					m_wSiteCaptureBar.SetMax(m_LinearAASGameModeComponent.m_iZoneCaptureTime);
 				
 				switch(zonefaction)
 				{
-					case m_LinearAASGameModeComponent.bluforSide : { m_wSiteCaptureBar.SetColorInt(ARGB(255, 0, 25, 225));    break;}; //Blufor
-					case m_LinearAASGameModeComponent.opforSide  : { m_wSiteCaptureBar.SetColorInt(ARGB(255, 225, 25, 0));    break;}; //Opfor
-					default                                      : { m_wSiteCaptureBar.SetColorInt(ARGB(255, 225, 225, 225)); break;}; //Uncaptured
+					case m_LinearAASGameModeComponent.m_BluforSide : { m_wSiteCaptureBar.SetColorInt(ARGB(255, 0, 25, 225));    break;}; //Blufor
+					case m_LinearAASGameModeComponent.m_OpforSide  : { m_wSiteCaptureBar.SetColorInt(ARGB(255, 225, 25, 0));    break;}; //Opfor
+					default                                        : { m_wSiteCaptureBar.SetColorInt(ARGB(255, 225, 225, 225)); break;}; //Uncaptured
 				}
 				
 				if (m_bStoredFadeInBoolean)
