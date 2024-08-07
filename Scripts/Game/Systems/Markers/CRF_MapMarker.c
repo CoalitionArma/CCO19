@@ -22,6 +22,9 @@ modded class SCR_MapMarkersUI
 	{
 		array<string> storedMarkerArray = CRF_GameModePlayerComponent.GetInstance().GetScriptedMarkersArray();
 		
+		if(SCR_BaseGameMode.Cast(GetGame().GetGameMode()).IsRunning())
+			GetGame().GetCallqueue().Remove(AddInitialMarkers);
+		
 		if(!storedMarkerArray || storedMarkerArray.IsEmpty())
 			return;
 		
@@ -82,7 +85,6 @@ modded class SCR_MapMarkersUI
 		
 		foreach(Widget marker, string markerString : m_mStoredWidgetSettingsMap)
 		{
-			i = i + 1;
 			vector pos;
 			
 			TStringArray markerStringArray = {};
@@ -113,7 +115,6 @@ modded class SCR_MapMarkersUI
 							m_aStoredPosArray.Set(i, pos);
 						else
 							m_aStoredPosArray.Insert(pos);
-					
 					} else {
 						if (m_aStoredPosArray.IsIndexValid(i))
 							pos = m_aStoredPosArray.Get(i);
@@ -140,6 +141,8 @@ modded class SCR_MapMarkersUI
 				screenPosX,
 				screenPosY
 			);
+			
+			i = i + 1;
 		};
 	}
 }

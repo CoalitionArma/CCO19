@@ -38,6 +38,7 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 	protected bool m_bAdminForcedReady = false;
 	
 	protected SCR_BaseGameMode m_GameMode;
+	protected CRF_LoggingServerComponent m_Logging;
 	
 	protected int m_iPlayedFactionsCount;
 	protected ref map<IEntity,bool> m_mPlayersWithEHsMap = new map<IEntity,bool>;
@@ -47,6 +48,8 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 	protected int m_mPlayablesCount = 0;
 	
 	protected SCR_PopUpNotification m_PopUpNotification = null;
+	
+	bool m_bHUDVisible = true;
 	
 	//------------------------------------------------------------------------------------------------
 
@@ -71,10 +74,13 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 		// Only run on in-game post init
 		// Is the the right way to do this? WHO KNOWS !
 		if (!GetGame().InPlayMode()) return;
+		
+		GetGame().GetInputManager().AddActionListener("SwitchSpectatorUI", EActionTrigger.DOWN, UpdateHUDVisible);
 			
 		if (Replication.IsServer())
 		{
 			m_GameMode = SCR_BaseGameMode.Cast(GetGame().GetGameMode());
+			m_Logging = CRF_LoggingServerComponent.Cast(m_GameMode.FindComponent(CRF_LoggingServerComponent));
 			GetGame().GetCallqueue().CallLater(WaitTillGameStart, 1000, true);
 		} 
 	}
@@ -85,6 +91,13 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 
 	//------------------------------------------------------------------------------------------------
 	
+	//------------------------------------------------------------------------------------------------
+	void UpdateHUDVisible()
+	{	
+		m_bHUDVisible = !m_bHUDVisible;
+	};
+	
+	//------------------------------------------------------------------------------------------------
 	TStringArray GetWhosReady() {
 		return m_aFactionsStatusArray;
 	}
@@ -314,6 +327,9 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 			Replication.BumpMe();//Broadcast change
 			
 			DisableSafeStartEHs();
+			
+			// Send notification message 
+			m_Logging.GameStarted();
 			
 			// Use CallLater to delay the call for the removal of EHs so the changes so m_SafeStartEnabled can propagate.
 			GetGame().GetCallqueue().CallLater(DisableSafeStartEHs, 1500);

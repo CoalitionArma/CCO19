@@ -6,7 +6,7 @@ class CRF_GameModePlayerComponentClass: ScriptComponentClass
 
 class CRF_GameModePlayerComponent: ScriptComponent
 {	
-  ref array<string> m_aScriptedMarkers = {};
+  ref array<string> m_aScriptedMarkers = new array<string>;
 	
 	//------------------------------------------------------------------------------------------------
 
@@ -41,7 +41,7 @@ class CRF_GameModePlayerComponent: ScriptComponent
 	
 	//------------------------------------------------------------------------------------------------
 
-	// Functions for Linear AAS
+	// Functions for Frontline
 	
 	//------------------------------------------------------------------------------------------------
 	
@@ -112,7 +112,7 @@ class CRF_GameModePlayerComponent: ScriptComponent
 	//! !LOCAL! Removes the scripted marker from the users map, must have all params be the same params that were initially put in the AddScriptedMarkers function
 	void RemoveScriptedMarker(string markerEntityName, vector markerOffset, int timeDelay, string markerText, string markerImage, int zOrder, int markerColor)
 	{
-		m_aScriptedMarkers.RemoveItem(string.Format("%1||%2||%3||%4||%5||%6||%7", markerEntityName, markerOffset.ToString(), timeDelay.ToString(), markerText, markerImage, zOrder.ToString(), markerColor.ToString()));
+		m_aScriptedMarkers.RemoveItemOrdered(string.Format("%1||%2||%3||%4||%5||%6||%7", markerEntityName, markerOffset.ToString(), timeDelay.ToString(), markerText, markerImage, zOrder.ToString(), markerColor.ToString()));
 	}
 	
 	//------------------------------------------------------------------------------------------------

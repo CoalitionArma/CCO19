@@ -1,5 +1,6 @@
 FrameWidgetClass {
  Name "rootFrame"
+ Opacity 0
  {
   TextWidgetClass "{62080BF138A8EE60}" {
    Name "SiteCaptureText"
