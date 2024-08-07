@@ -6,7 +6,7 @@ class CRF_LinearAASGameModeComponentClass: SCR_BaseGameModeComponentClass
 
 class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 {
-	[Attribute("US", "auto", "The side designated as blufor, this faction will have control of the begining half of the total zones at game start. \n\n In Example: If the total zones were [A, B, C, D, E] this faction would have control of [A, B] at game start", category: "Linear AAS Faction Settings")]
+	[Attribute("US", "auto", "The side designated as blufor, this faction will have control of the beginning half of the total zones at game start. \n\n In Example: If the total zones were [A, B, C, D, E] this faction would have control of [A, B] at game start", category: "Linear AAS Faction Settings")]
 	FactionKey m_BluforSide;
 	
 	[Attribute("SFRV", "auto", "Nickname for the side designated as blufor", category: "Linear AAS Faction Settings")]
@@ -21,7 +21,7 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 	[Attribute("", UIWidgets.EditBox, desc: "Array of all zone object names, !MAKE SURE ALL OBJECTS LISTED ARE INVINCIBLE!", category: "Linear AAS Zone Settings")]
 	ref array<string> m_aZoneObjectNames;
 	
-	[Attribute("60", "auto", "[Seconds] The ammount of time it takes to cap a zone", category: "Linear AAS Zone Settings")]
+	[Attribute("60", "auto", "[Seconds] The amount of time it takes to cap a zone", category: "Linear AAS Zone Settings")]
 	int m_iZoneCaptureTime;
 	
 	[Attribute("60", "auto", "[Seconds] Time until the frontline zones are unlocked after being locked, recommend you stick to on of these: [5 minutes, 10 minutes, 15 minutes, 20 minutes]", category: "Linear AAS Zone Settings")]
@@ -30,13 +30,13 @@ class CRF_LinearAASGameModeComponent: SCR_BaseGameModeComponent
 	[Attribute("1", "auto", "Min number of players needed to cap a zone", category: "Linear AAS Zone Settings")]
 	int m_iMinNumberOfPlayersNeeded;
 	
-	[Attribute("180", "auto", "[Seconds] When all zones are captured by a side, it'll tkae this set time to declare that side a victor", category: "Linear AAS Zone Settings")]
+	[Attribute("180", "auto", "[Seconds] When all zones are captured by a side, it'll take this set time to declare that side a victor", category: "Linear AAS Zone Settings")]
 	int m_iTimeToWin;
 	
-	[Attribute("120", "auto", "[Seconds] Time unitl the middle zone is unlocked", category: "Linear AAS Zone Settings")]
+	[Attribute("120", "auto", "[Seconds] Time until the middle zone is unlocked", category: "Linear AAS Zone Settings")]
 	int m_iInitialTime;
 	
-	// - All players withing a zones range
+	// - All players within a zones range
 	ref array<SCR_ChimeraCharacter> m_aAllPlayersWithinZoneRange = new array<SCR_ChimeraCharacter>;
 	
 	[RplProp(onRplName: "UpdateClients")]
