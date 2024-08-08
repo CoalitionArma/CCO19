@@ -1,20 +1,6 @@
 SCR_BaseGameMode {
  ID "56B2B479C6B96951"
  components {
-  CRF_FrontlineGameModeComponent "{620F6AB8F7CA48DE}" {
-   m_sBluforSideNickname "SFRV"
-   m_sOpforSideNickname "OCP"
-   m_aZoneObjectNames {
-    "aZone" "bZone" "cZone" "dZone" "eZone"
-   }
-   m_iZoneCaptureTime 60
-   m_iZoneUnlockTime 1200
-   m_iMinNumberOfPlayersNeeded 10
-   m_iTimeToWin 1800
-   m_iInitialTime 1200
-  }
-  CRF_LoggingServerComponent "{62051828F3A45E77}" {
-  }
   CRF_SafestartGameModeComponent "{61FD260E8973CC41}" {
    m_iTimeLimitMinutes 180
    m_bDeleteJIPSlots 0

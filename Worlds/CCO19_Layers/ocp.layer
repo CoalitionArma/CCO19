@@ -1,6 +1,6 @@
 $grp SCR_VehicleSpawn {
  {
-  coords 13928.732 26.425 14587.616
+  coords 13928.732 26.425 14587.615
   angleX -3.551
   angleY -103
   angleZ 4.478
@@ -9,7 +9,7 @@ $grp SCR_VehicleSpawn {
   firstSpawn 2
  }
  {
-  coords 13935.701 26.837 14589.695
+  coords 13935.701 26.838 14589.694
   angleX -3.656
   angleY -97.188
   angleZ 3.159
@@ -19,162 +19,160 @@ $grp SCR_VehicleSpawn {
  }
  {
   coords 13934.346 26.18 14607.909
-  angleX -3.551
+  angleX -3.552
   angleY -91
-  angleZ 4.478
+  angleZ 1.402
   m_rnPrefab "{1DA37290B809BEA1}Prefabs/Vehicles/Wheeled/BTR70/BTR70_OCP.et"
   respawnDelay 900
   firstSpawn 2
  }
  {
-  coords 13934.698 26.338 14602.116
-  angleX -3.551
+  coords 13934.697 26.337 14602.115
+  angleX -3.552
   angleY -91
-  angleZ 4.478
+  angleZ 1.402
   m_rnPrefab "{1DA37290B809BEA1}Prefabs/Vehicles/Wheeled/BTR70/BTR70_OCP.et"
   respawnDelay 900
   firstSpawn 2
  }
  {
-  coords 13931.148 25.644 14645.307
-  angleX -3.551
-  angleY -91
-  angleZ 4.478
+  coords 13931.147 25.644 14645.307
+  angleX -2.229
+  angleY -90.989
+  angleZ 0.486
   m_rnPrefab "{42739BBE87B49CFD}T-55/T55_OCP.et"
   respawnDelay 900
   firstSpawn 2
  }
  {
-  coords 13930.403 25.572 14653.163
-  angleX -3.551
-  angleY -91
-  angleZ 4.478
+  coords 13930.403 25.573 14653.162
+  angleX -2.676
+  angleY -90.993
+  angleZ 0.493
   m_rnPrefab "{42739BBE87B49CFD}T-55/T55_OCP.et"
   respawnDelay 900
   firstSpawn 2
  }
  {
   coords 13919.006 24.826 14677.074
-  angleX -3.551
-  angleY 168
-  angleZ 4.478
+  angleX 1.936
+  angleY 168.048
+  angleZ 0.505
   m_rnPrefab "{04ED3289DCD15F56}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_OCP_ammo.et"
   respawnDelay 300
   firstSpawn 2
  }
  {
   coords 13924.058 24.895 14678.442
-  angleX -3.551
-  angleY 168
-  angleZ 4.478
+  angleX 2.21
+  angleY 168.183
+  angleZ 1.822
   m_rnPrefab "{04ED3289DCD15F56}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_OCP_ammo.et"
   respawnDelay 300
   firstSpawn 2
  }
  {
-  coords 13929.938 25.09 14680.011
-  angleX -3.551
-  angleY 156
-  angleZ 4.478
+  coords 13929.939 25.09 14680.011
+  angleX 2.72
+  angleY 156.19
+  angleZ 1.732
   m_rnPrefab "{146CB79D7A81FEA8}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_OCP_tanker.et"
   respawnDelay 300
   firstSpawn 2
  }
  {
-  coords 13936.542 25.431 14682.081
-  angleX -3.551
-  angleY 156
-  angleZ 4.478
+  coords 13936.542 25.432 14682.081
+  angleX 3.019
+  angleY 156.408
+  angleZ 3.555
   m_rnPrefab "{146CB79D7A81FEA8}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_OCP_tanker.et"
   respawnDelay 300
   firstSpawn 2
  }
  {
-  coords 13853.221 23.26 14650.972
-  angleX -3.551
-  angleY 163
-  angleZ 4.478
+  coords 13853.221 23.26 14650.973
+  angleX -0.079
+  angleY 163.172
+  angleZ 2.828
   m_rnPrefab "{E3807622EA554C4E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_OCP_transport_covered.et"
   respawnDelay 300
   firstSpawn 2
  }
  {
-  coords 13849.108 23.043 14649.419
-  angleX -3.551
-  angleY 163
-  angleZ 4.478
+  coords 13849.107 23.043 14649.419
+  angleX -0.079
+  angleY 163.172
+  angleZ 2.828
   m_rnPrefab "{E3807622EA554C4E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_OCP_transport_covered.et"
   respawnDelay 300
   firstSpawn 2
  }
  {
-  coords 13844.627 22.865 14648.253
-  angleX -3.551
-  angleY 163
-  angleZ 4.478
+  coords 13844.626 22.865 14648.253
+  angleX 0.092
+  angleY 163.117
+  angleZ 1.843
   m_rnPrefab "{E3807622EA554C4E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_OCP_transport_covered.et"
   respawnDelay 300
   firstSpawn 2
  }
  {
-  coords 13839.931 22.703 14647.085
-  angleX -3.551
-  angleY 163
-  angleZ 4.478
+  coords 13839.932 22.702 14647.085
+  angleX -0.466
+  angleY 163.083
+  angleZ 1.545
   m_rnPrefab "{E3807622EA554C4E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_OCP_transport_covered.et"
   respawnDelay 300
   firstSpawn 2
  }
  {
-  coords 13858.801 23.313 14636.479
-  angleX -3.551
-  angleY -17
-  angleZ 4.478
+  coords 13858.801 23.312 14636.479
+  angleX -0.497
+  angleY -17.167
+  angleZ -3.123
   m_rnPrefab "{E3807622EA554C4E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_OCP_transport_covered.et"
   respawnDelay 300
   firstSpawn 2
  }
  {
-  coords 13854.233 23.067 14635.151
-  angleX -3.551
-  angleY -17
-  angleZ 4.478
+  coords 13854.233 23.067 14635.15
+  angleX -0.364
+  angleY -17.15
+  angleZ -2.696
   m_rnPrefab "{E3807622EA554C4E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_OCP_transport_covered.et"
   respawnDelay 300
   firstSpawn 2
  }
  {
   coords 13849.681 22.861 14633.797
-  angleX -3.551
-  angleY -17
-  angleZ 4.478
+  angleX -0.231
+  angleY -17.132
+  angleZ -2.27
   m_rnPrefab "{E3807622EA554C4E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_OCP_transport_covered.et"
   respawnDelay 300
   firstSpawn 2
  }
  {
   coords 13845.35 22.702 14632.424
-  angleX -3.551
-  angleY -17
-  angleZ 4.478
+  angleX -0.099
+  angleY -17.111
+  angleZ -1.842
   m_rnPrefab "{E3807622EA554C4E}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_OCP_transport_covered.et"
   respawnDelay 300
   firstSpawn 2
  }
  {
-  coords 13831.181 22.472 14629.23
-  angleX -3.551
-  angleY -17
-  angleZ 4.478
+  coords 13831.181 22.472 14629.231
+  angleX 0.297
+  angleY -17.038
+  angleZ -0.559
   m_rnPrefab "{5E3BC83623B7702D}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_OCP.et"
   respawnDelay 300
   firstSpawn 2
  }
  {
-  coords 13827.244 22.469 14628.053
-  angleX -3.551
+  coords 13827.244 22.468 14628.053
   angleY -17
-  angleZ 4.478
   m_rnPrefab "{5E3BC83623B7702D}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_OCP.et"
   respawnDelay 300
   firstSpawn 2
