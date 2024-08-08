@@ -1,75 +1,53 @@
-GenericEntity dZone : "{4EBC47B8D0D10809}Prefabs/Structures/LinearAAS/FlagPole_Zone_D.et" {
- coords 11728.558 31.991 11863.919
- angleX 0.633
- angleY 133.036
- angleZ -0.022
-}
-GenericEntity cZone : "{73886280A5BD813E}Prefabs/Structures/LinearAAS/FlagPole_Zone_C.et" {
- coords 12211.546 42.796 9785.599
- angleX -0.448
- angleY 0.004
- angleZ -0.448
-}
-GenericEntity bZone : "{96142E79A9581655}Prefabs/Structures/LinearAAS/FlagPole_Zone_B.et" {
- coords 13864.753 48.442 9035.616
- angleX -0.448
- angleY 0.004
- angleZ -0.448
-}
-GenericEntity : "{69131FD53AF6C044}Prefabs/Compositions/Slotted/SlotFlatSmall/SupplyStorage_S_US_01.et" {
- coords 15607.7 49.969 7495.007
- angleY 174
-}
-GenericEntity eZone : "{AB200B41DC349F62}Prefabs/Structures/LinearAAS/FlagPole_Zone_E.et" {
- coords 10504.836 83.838 13805.337
- angleX -0.448
- angleY 0.004
- angleZ -0.448
-}
-GenericEntity : "{7C367E9261376345}Prefabs/Compositions/Slotted/SlotFlatSmall/AmmoStorage_S_US_01.et" {
- coords 15584.679 49.969 7476.731
- angleY 82
+$grp GenericEntity : "{1EB5949DF6738E38}Prefabs/Compositions/Slotted/SlotFlatSmall/VehicleMaintenance_S_USSR_01.et" {
  {
-  GenericEntity {
-   ID "5E330D6E0719D313"
-   components {
-    SCR_ResourceComponent "{5E3298BE225F0743}" {
-     m_aContainers {
-      SCR_ResourceContainer "{620F17A015E6D081}" {
-       m_eResourceRights ALL
-       m_eStorageType STORED
-       m_fResourceValueCurrent 500
-       m_fResourceValueMax 500
+  coords 11762.855 30.663 11801.851
+  angleY -76
+ }
+ {
+  coords 10539.45 73.54 13803.663
+  angleY -76
+ }
+}
+$grp GenericEntity : "{4093AE33DCEFAD67}Prefabs/Compositions/Slotted/SlotFlatSmall/SupplyStorage_S_USSR_01.et" {
+ {
+  coords 11753.118 31.313 11862.309
+  angleY 84
+  {
+   GenericEntity {
+    ID "58C28EA171B30DC1"
+    components {
+     SCR_ResourceComponent "{5E5ABDF371AE8B21}" {
+      m_aContainers {
+       SCR_ResourceContainer "{62104B369CC1D8CC}" {
+        m_eStorageType STORED
+        m_fResourceValueCurrent 0
+        m_fResourceValueMax 1000
+        m_fResourceGain 0
+        m_fResourceGainTickrate 0
+        m_fResourceGainTimeout 0
+        m_fResourceDecay 0
+        m_fResourceDecayTickrate 0
+        m_fResourceDecayTimeout 0
+       }
       }
      }
     }
    }
   }
-  GenericEntity {
-   ID "5D06E957D85806FB"
-   {
-    GenericEntity {
-     ID "5D371ACBFA947460"
-     components {
-      SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
-       m_eSupportedArsenalItemTypes 262782
-       m_eSupportedArsenalItemModes 48
-       m_eEditableAttributeGroups AMMUNITION_MODE
-      }
-     }
-    }
-   }
-  }
-  GenericEntity {
-   ID "5D06E957D858060A"
-   {
-    GenericEntity {
-     ID "5D371ACBE97B9E1F"
-     components {
-      SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
-       m_eSupportedArsenalItemTypes 262782
-       m_eSupportedArsenalItemModes 48
-       m_eEditableAttributeGroups AMMUNITION_MODE
+ }
+ {
+  coords 10482.331 72.344 13820.781
+  angleY 116
+  {
+   GenericEntity {
+    ID "58C28EA171B30DC1"
+    components {
+     SCR_ResourceComponent "{5E5ABDF371AE8B21}" {
+      m_aContainers {
+       SCR_ResourceContainer "{62104B36B4458264}" {
+        m_eStorageType STORED
+        m_fResourceValueMax 1000
+       }
       }
      }
     }
@@ -77,9 +55,241 @@ GenericEntity : "{7C367E9261376345}Prefabs/Compositions/Slotted/SlotFlatSmall/Am
   }
  }
 }
-GenericEntity : "{ECB8E313DFBD3415}Prefabs/Compositions/Slotted/SlotFlatSmall/VehicleMaintenance_S_US_01.et" {
- coords 15575.202 49.97 7455.851
- angleY 136
+GenericEntity dZone : "{4EBC47B8D0D10809}Prefabs/Structures/LinearAAS/FlagPole_Zone_D.et" {
+ coords 11728.558 31.991 11863.919
+ angleX 0.633
+ angleY 133.036
+ angleZ -0.022
+}
+$grp GenericEntity : "{69131FD53AF6C044}Prefabs/Compositions/Slotted/SlotFlatSmall/SupplyStorage_S_US_01.et" {
+ {
+  coords 15607.7 49.969 7495.007
+  angleY 174
+  {
+   GenericEntity {
+    ID "58C28EA16E7B7C58"
+    components {
+     SCR_ResourceComponent "{5E5ABDF371AE8B21}" {
+      m_aContainers {
+       SCR_ResourceContainer "{62104B36534FF439}" {
+        m_eStorageType STORED
+        m_fResourceValueCurrent 0
+        m_fResourceValueMax 1000
+        m_fResourceGain 0
+        m_fResourceGainTickrate 0
+        m_fResourceGainTimeout 0
+        m_fResourceDecay 0
+        m_fResourceDecayTickrate 0
+        m_fResourceDecayTimeout 0
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ {
+  coords 13894.176 48.838 8994.514
+  angleX -2.138
+  angleY 46.807
+  angleZ 5.167
+  {
+   GenericEntity {
+    ID "58C28EA16E7B7C58"
+    components {
+     SCR_ResourceComponent "{5E5ABDF371AE8B21}" {
+      m_aContainers {
+       SCR_ResourceContainer "{62104B3695A91088}" {
+        m_eStorageType STORED
+        m_fResourceValueCurrent 0
+        m_fResourceValueMax 1000
+        m_fResourceGain 0
+        m_fResourceGainTickrate 0
+        m_fResourceGainTimeout 0
+        m_fResourceDecay 0
+        m_fResourceDecayTickrate 0
+        m_fResourceDecayTimeout 0
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity cZone : "{73886280A5BD813E}Prefabs/Structures/LinearAAS/FlagPole_Zone_C.et" {
+ coords 12211.546 42.796 9785.599
+ angleX -0.448
+ angleY 0.004
+ angleZ -0.448
+}
+$grp GenericEntity : "{7C20041DA3207191}Prefabs/Compositions/Slotted/SlotFlatSmall/AmmoStorage_S_USSR_01.et" {
+ {
+  coords 11720.978 30.701 11894.414
+  angleY -78
+  {
+   GenericEntity {
+    ID "5E330D6E7AB8007D"
+    components {
+     SCR_ResourceComponent "{5E3298BE225F0743}" {
+      m_aContainers {
+       SCR_ResourceContainer "{62104B3632A73DA6}" {
+        m_eStorageType STORED
+        m_fResourceValueMax 500
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ {
+  coords 10473.255 72.345 13790.118
+  angleY -78
+  {
+   GenericEntity {
+    ID "5E330D6E7AB8007D"
+    components {
+     SCR_ResourceComponent "{5E3298BE225F0743}" {
+      m_aContainers {
+       SCR_ResourceContainer "{62104B36051E1418}" {
+        m_eStorageType STORED
+        m_fResourceValueMax 500
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
+$grp GenericEntity : "{7C367E9261376345}Prefabs/Compositions/Slotted/SlotFlatSmall/AmmoStorage_S_US_01.et" {
+ {
+  coords 15584.679 49.969 7476.731
+  angleY 82
+  {
+   GenericEntity {
+    ID "5E330D6E0719D313"
+    components {
+     SCR_ResourceComponent "{5E3298BE225F0743}" {
+      m_aContainers {
+       SCR_ResourceContainer "{620F17A015E6D081}" {
+        m_eResourceRights ALL
+        m_eStorageType STORED
+        m_fResourceValueCurrent 0
+        m_fResourceValueMax 500
+       }
+      }
+     }
+    }
+   }
+   GenericEntity {
+    ID "5D06E957D85806FB"
+    {
+     GenericEntity {
+      ID "5D371ACBFA947460"
+      components {
+       SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
+        m_eSupportedArsenalItemTypes 262782
+        m_eSupportedArsenalItemModes 48
+        m_eEditableAttributeGroups AMMUNITION_MODE
+       }
+      }
+     }
+    }
+   }
+   GenericEntity {
+    ID "5D06E957D858060A"
+    {
+     GenericEntity {
+      ID "5D371ACBE97B9E1F"
+      components {
+       SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
+        m_eSupportedArsenalItemTypes 262782
+        m_eSupportedArsenalItemModes 48
+        m_eEditableAttributeGroups AMMUNITION_MODE
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ {
+  coords 13846.186 47.059 9049.175
+  angleY 117
+  {
+   GenericEntity {
+    ID "5E330D6E0719D313"
+    components {
+     SCR_ResourceComponent "{5E3298BE225F0743}" {
+      m_aContainers {
+       SCR_ResourceContainer "{620F17A015E6D081}" {
+        m_eResourceRights ALL
+        m_eStorageType STORED
+        m_fResourceValueCurrent 0
+        m_fResourceValueMax 500
+       }
+      }
+     }
+    }
+   }
+   GenericEntity {
+    ID "5D06E957D85806FB"
+    {
+     GenericEntity {
+      ID "5D371ACBFA947460"
+      components {
+       SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
+        m_eSupportedArsenalItemTypes 262782
+        m_eSupportedArsenalItemModes 48
+        m_eEditableAttributeGroups AMMUNITION_MODE
+       }
+      }
+     }
+    }
+   }
+   GenericEntity {
+    ID "5D06E957D858060A"
+    {
+     GenericEntity {
+      ID "5D371ACBE97B9E1F"
+      components {
+       SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
+        m_eSupportedArsenalItemTypes 262782
+        m_eSupportedArsenalItemModes 48
+        m_eEditableAttributeGroups AMMUNITION_MODE
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity bZone : "{96142E79A9581655}Prefabs/Structures/LinearAAS/FlagPole_Zone_B.et" {
+ coords 13864.753 48.442 9035.616
+ angleX -0.448
+ angleY 0.004
+ angleZ -0.448
+}
+GenericEntity eZone : "{AB200B41DC349F62}Prefabs/Structures/LinearAAS/FlagPole_Zone_E.et" {
+ coords 10504.836 83.838 13805.337
+ angleX -0.448
+ angleY 0.004
+ angleZ -0.448
+}
+$grp GenericEntity : "{ECB8E313DFBD3415}Prefabs/Compositions/Slotted/SlotFlatSmall/VehicleMaintenance_S_US_01.et" {
+ {
+  coords 15575.202 49.97 7455.851
+  angleY 136
+ }
+ {
+  coords 13903.648 49.233 9010.453
+  angleX -1.3
+  angleY -151.053
+  angleZ 2.348
+ }
 }
 GenericEntity aZone : "{FA401A99159C997B}Prefabs/Structures/LinearAAS/FlagPole_Zone_A.et" {
  coords 15573.545 51.168 7493.592
