@@ -4,66 +4,11 @@ GenericEntity dZone : "{4EBC47B8D0D10809}Prefabs/Structures/LinearAAS/FlagPole_Z
  angleY 133.036
  angleZ -0.022
 }
-GenericEntity : "{69131FD53AF6C044}Prefabs/Compositions/Slotted/SlotFlatSmall/SupplyStorage_S_US_01.et" {
- coords 15607.7 49.969 7495.007
- angleY 174
-}
 GenericEntity cZone : "{73886280A5BD813E}Prefabs/Structures/LinearAAS/FlagPole_Zone_C.et" {
  coords 12211.546 42.796 9785.599
  angleX -0.448
  angleY 0.004
  angleZ -0.448
-}
-GenericEntity : "{7C367E9261376345}Prefabs/Compositions/Slotted/SlotFlatSmall/AmmoStorage_S_US_01.et" {
- coords 15584.679 49.969 7476.731
- angleY 82
- {
-  GenericEntity {
-   ID "5E330D6E0719D313"
-   components {
-    SCR_ResourceComponent "{5E3298BE225F0743}" {
-     m_aContainers {
-      SCR_ResourceContainer "{620F17A015E6D081}" {
-       m_eResourceRights ALL
-       m_eStorageType STORED
-       m_fResourceValueCurrent 500
-       m_fResourceValueMax 500
-      }
-     }
-    }
-   }
-  }
-  GenericEntity {
-   ID "5D06E957D85806FB"
-   {
-    GenericEntity {
-     ID "5D371ACBFA947460"
-     components {
-      SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
-       m_eSupportedArsenalItemTypes 262782
-       m_eSupportedArsenalItemModes 48
-       m_eEditableAttributeGroups AMMUNITION_MODE
-      }
-     }
-    }
-   }
-  }
-  GenericEntity {
-   ID "5D06E957D858060A"
-   {
-    GenericEntity {
-     ID "5D371ACBE97B9E1F"
-     components {
-      SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
-       m_eSupportedArsenalItemTypes 262782
-       m_eSupportedArsenalItemModes 48
-       m_eEditableAttributeGroups AMMUNITION_MODE
-      }
-     }
-    }
-   }
-  }
- }
 }
 GenericEntity bZone : "{96142E79A9581655}Prefabs/Structures/LinearAAS/FlagPole_Zone_B.et" {
  coords 13864.753 48.442 9035.616
@@ -76,10 +21,6 @@ GenericEntity eZone : "{AB200B41DC349F62}Prefabs/Structures/LinearAAS/FlagPole_Z
  angleX -0.448
  angleY 0.004
  angleZ -0.448
-}
-GenericEntity : "{ECB8E313DFBD3415}Prefabs/Compositions/Slotted/SlotFlatSmall/VehicleMaintenance_S_US_01.et" {
- coords 15575.202 49.97 7455.851
- angleY 136
 }
 GenericEntity aZone : "{FA401A99159C997B}Prefabs/Structures/LinearAAS/FlagPole_Zone_A.et" {
  coords 15573.545 51.168 7493.592
