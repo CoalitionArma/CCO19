@@ -55,11 +55,11 @@ $grp GenericEntity : "{4093AE33DCEFAD67}Prefabs/Compositions/Slotted/SlotFlatSma
   }
  }
 }
-GenericEntity dZone : "{4EBC47B8D0D10809}Prefabs/Structures/LinearAAS/FlagPole_Zone_D.et" {
- coords 11728.558 31.991 11863.919
- angleX 0.633
- angleY 133.036
- angleZ -0.022
+GenericEntity dZone : "{4EBC47B8D0D10809}Prefabs/Structures/Frontline/FlagPole_Zone_D.et" {
+ coords 11730.851 32.072 11876.776
+ angleX -0.363
+ angleY -99.982
+ angleZ 0.519
 }
 $grp GenericEntity : "{69131FD53AF6C044}Prefabs/Compositions/Slotted/SlotFlatSmall/SupplyStorage_S_US_01.et" {
  {
@@ -117,8 +117,8 @@ $grp GenericEntity : "{69131FD53AF6C044}Prefabs/Compositions/Slotted/SlotFlatSma
   }
  }
 }
-GenericEntity cZone : "{73886280A5BD813E}Prefabs/Structures/LinearAAS/FlagPole_Zone_C.et" {
- coords 12211.546 42.796 9785.599
+GenericEntity cZone : "{73886280A5BD813E}Prefabs/Structures/Frontline/FlagPole_Zone_C.et" {
+ coords 12211.545 42.874 9785.6
  angleX -0.448
  angleY 0.004
  angleZ -0.448
@@ -267,14 +267,14 @@ $grp GenericEntity : "{7C367E9261376345}Prefabs/Compositions/Slotted/SlotFlatSma
   }
  }
 }
-GenericEntity bZone : "{96142E79A9581655}Prefabs/Structures/LinearAAS/FlagPole_Zone_B.et" {
- coords 13864.753 48.442 9035.616
+GenericEntity bZone : "{96142E79A9581655}Prefabs/Structures/Frontline/FlagPole_Zone_B.et" {
+ coords 13864.752 48.543 9035.616
  angleX -0.448
  angleY 0.004
  angleZ -0.448
 }
-GenericEntity eZone : "{AB200B41DC349F62}Prefabs/Structures/LinearAAS/FlagPole_Zone_E.et" {
- coords 10504.836 83.838 13805.337
+GenericEntity eZone : "{AB200B41DC349F62}Prefabs/Structures/Frontline/FlagPole_Zone_E.et" {
+ coords 10504.835 83.914 13805.338
  angleX -0.448
  angleY 0.004
  angleZ -0.448
@@ -291,8 +291,8 @@ $grp GenericEntity : "{ECB8E313DFBD3415}Prefabs/Compositions/Slotted/SlotFlatSma
   angleZ 2.348
  }
 }
-GenericEntity aZone : "{FA401A99159C997B}Prefabs/Structures/LinearAAS/FlagPole_Zone_A.et" {
- coords 15573.545 51.168 7493.592
+GenericEntity aZone : "{FA401A99159C997B}Prefabs/Structures/Frontline/FlagPole_Zone_A.et" {
+ coords 15573.545 51.182 7493.592
  angleX -0.448
  angleY 0.004
  angleZ -0.448
@@ -300,15 +300,19 @@ GenericEntity aZone : "{FA401A99159C997B}Prefabs/Structures/LinearAAS/FlagPole_Z
   GenericEntity {
    ID "620F5D9EF66CF637"
    {
+    GenericEntity {
+     ID "552A73090EF56F07"
+     coords -1.658 0.083 -0.854
+    }
     StaticModelEntity {
      ID "5712BD0472910F43"
-     coords -0.544 -0.026 -0.194
+     coords -0.544 0.022 -0.192
     }
    }
   }
   StaticModelEntity {
    ID "620F62FA26A45838"
-   coords -1.593 -1.182 0.928
+   coords -1.594 -1.206 0.928
   }
  }
 }

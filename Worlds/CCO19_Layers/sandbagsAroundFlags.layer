@@ -40,7 +40,7 @@ $grp GenericEntity : "{B1EF20282529F4B4}Prefabs/Compositions/Misc/SubComposition
 }
 $grp GenericEntity : "{B51CE80A9EEF7E00}Prefabs/Compositions/Misc/SubCompositions/Sandbag_Barricade_USSR_01.et" {
  {
-  coords 10503.836 82.7 13800.347
+  coords 10500.061 82.7 13799.872
   angleY -70.537
  }
  {
@@ -48,7 +48,7 @@ $grp GenericEntity : "{B51CE80A9EEF7E00}Prefabs/Compositions/Misc/SubComposition
   angleY 145.229
  }
  {
-  coords 10505.361 82.617 13810.021
+  coords 10504.201 82.617 13812.433
   angleY 109.019
  }
  {
