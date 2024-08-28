@@ -61,6 +61,17 @@ GenericEntity dZone : "{4EBC47B8D0D10809}Prefabs/Structures/Frontline/FlagPole_Z
  angleY -99.982
  angleZ 0.519
 }
+SCR_SpawnPoint : "{4FEA25583D0975F7}Prefabs/MP/Spawning/SpawnPoint_USSR.et" {
+ components {
+  SCR_MapDescriptorComponent "{54C659A97C47BDE2}" {
+   DisplayName "MAIN"
+   VisibleOnMap 1
+  }
+ }
+ coords 13859.52 25.128 14577.47
+ m_fSpawnRadius 20
+ m_bShowInDeployMapOnly 1
+}
 $grp GenericEntity : "{69131FD53AF6C044}Prefabs/Compositions/Slotted/SlotFlatSmall/SupplyStorage_S_US_01.et" {
  {
   coords 15607.7 49.969 7495.007
@@ -278,6 +289,16 @@ GenericEntity eZone : "{AB200B41DC349F62}Prefabs/Structures/Frontline/FlagPole_Z
  angleX -0.448
  angleY 0.004
  angleZ -0.448
+}
+SCR_SpawnPoint : "{B1248BD4035260A0}Prefabs/MP/Spawning/SpawnPoint_US_CP.et" {
+ components {
+  SCR_MapDescriptorComponent "{54C659A97C47BDE2}" {
+   DisplayName "MAIN"
+   VisibleOnMap 1
+  }
+ }
+ coords 13720.535 26.369 5718.536
+ m_fSpawnRadius 20
 }
 $grp GenericEntity : "{ECB8E313DFBD3415}Prefabs/Compositions/Slotted/SlotFlatSmall/VehicleMaintenance_S_US_01.et" {
  {
