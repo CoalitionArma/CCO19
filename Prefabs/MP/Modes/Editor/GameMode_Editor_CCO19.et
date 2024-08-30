@@ -1,0 +1,44 @@
+SCR_GameModeEditor : "{D2DE7F43D48A3667}Prefabs/MP/Modes/Editor/GameMode_Editor.et" {
+ ID "56B2B479C6B96951"
+ components {
+  SCR_CampaignBuildingManagerComponent "{623D1AB97DC98B3F}" {
+   m_sFreeRoamBuildingClientTrigger "{5E191CEAF4B95816}Prefabs/MP/FreeRoamBuildingClientTrigger.et"
+   m_BudgetType CAMPAIGN
+   m_iCompositionRefundPercentage 100
+   m_OutlineManager SCR_CampaignBuildingCompositionOutlineManager "{5DF6FBB5913F3245}" : "{96A8B496A076F1C0}scripts/Game/Building/CampaignBuildingCompositionOutline.conf" {
+   }
+   m_sPrefabsToBuildResource "{D2527D9AA5B4A33E}Configs/Editor/PlaceableEntities/Compositions/Compositions_FreeRoamBuilding.conf"
+  }
+  SCR_CommandingManagerComponent "{623D1AB97DC98B0C}" {
+  }
+  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
+   components {
+    SCR_WaveRespawnTimerComponent "{623D22A1016DC842}" {
+     m_fRespawnTime 120
+    }
+   }
+  }
+  SCR_RespawnTimerComponent "{56C2DDA6EE0E4071}" {
+   Enabled 0
+  }
+ }
+ {
+  SCR_FactionManager "623D22A128602651" : "{6AF5D069BE02DB4F}Prefabs/MP/Managers/Factions/FactionManager_CCO19b.et" {
+   ID "623D22A22CB8A79C"
+   coords 0 0 0
+  }
+  RadioManagerEntity : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
+   ID "623D1AB97DC95460"
+  }
+  ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
+   ID "623D1AB97DC95467"
+  }
+  SCR_LoadoutManager : "{3219207B51F9D0BE}Prefabs/MP/Managers/Loadouts/LoadoutManager_CCO19.et" {
+   ID "623D1ABAFAB80A5B"
+   coords 0 0 0
+  }
+  SCR_BaseTaskManager : "{87208DAD6F3C0DE2}Prefabs/MP/Managers/Tasks/TaskManager_Editor.et" {
+   ID "623D1AB97DC98B35"
+  }
+ }
+}

@@ -1,0 +1,221 @@
+SCR_FactionManager : "{A242612865F2A48E}Prefabs/MP/Managers/Factions/FactionManager_Base.et" {
+ ID "56B2B4776E6E4499"
+ Factions {
+  SCR_Faction "{56DEAC40D2DBC8B1}" : "{5EB46557DF2AA24F}Configs/Factions/US.conf" {
+   UIInfo SCR_FactionUIInfo "{528C961236B7DCD3}" {
+    Name "SFRV"
+    Icon "{8618D11C3784730C}Images/SFRV.edds"
+    m_sNameUpper "SFRV"
+   }
+   m_sFactionFlag "{8618D11C3784730C}Images/SFRV.edds"
+   m_CallsignInfo SCR_FactionCallsignInfo "{5DA0F2A6677ADA9E}" {
+    m_aSquadNames {
+     SCR_CallsignInfo "{55CCB792D10AD8F4}" {
+      m_sCallsign "COY"
+     }
+     SCR_CallsignInfo "{55CCB792D13759D8}" {
+      m_sCallsign "1PLT"
+     }
+     SCR_CallsignInfo "{55CCB792D1218E95}" {
+      m_sCallsign "1-1"
+     }
+     SCR_CallsignInfo "{55CCB792D0C8B3CE}" {
+      m_sCallsign "1-2"
+     }
+     SCR_CallsignInfo "{623D22A0C78D69DD}" {
+      m_sCallsign "1-3"
+     }
+     SCR_CallsignInfo "{623D22A0C6543170}" {
+      m_sCallsign "1-4"
+     }
+     SCR_CallsignInfo "{623D22A0C6146ED6}" {
+      m_sCallsign "1-5"
+     }
+     SCR_CallsignInfo "{623D22A0C6D46E7B}" {
+      m_sCallsign "ARMOR"
+     }
+     SCR_CallsignInfo "{623D22A0C697F860}" {
+      m_sCallsign "ARTY"
+     }
+     SCR_CallsignInfo "{623D22A0C564A10F}" {
+      m_sCallsign "LOGI"
+     }
+    }
+    m_sCallsignGroupFormat "%3"
+   }
+   m_aPredefinedGroups {
+    SCR_GroupPreset "{623D22A08B289D4A}" {
+     m_sGroupName "Company Command"
+     m_sGroupFlag "{AEA07460606095ED}UI/Textures/FieldManual/Gameplay/Navigation/Images/MilitarySymbol/FM_Milsymbol_Infantry_UI.edds"
+     m_iGroupSize 2
+    }
+    SCR_GroupPreset "{623D22A06C13A305}" {
+     m_sGroupName "1st Platoon"
+     m_sGroupFlag "{AEA07460606095ED}UI/Textures/FieldManual/Gameplay/Navigation/Images/MilitarySymbol/FM_Milsymbol_Infantry_UI.edds"
+     m_iGroupSize 3
+     m_iRadioFrequency 0
+    }
+    SCR_GroupPreset "{623D22A063597882}" {
+     m_sGroupName "1st Squad"
+     m_sGroupFlag "{AEA07460606095ED}UI/Textures/FieldManual/Gameplay/Navigation/Images/MilitarySymbol/FM_Milsymbol_Infantry_UI.edds"
+     m_iGroupSize 10
+     m_iRadioFrequency 0
+    }
+    SCR_GroupPreset "{623D22A077265C29}" {
+     m_sGroupName "2nd Squad"
+     m_sGroupFlag "{AEA07460606095ED}UI/Textures/FieldManual/Gameplay/Navigation/Images/MilitarySymbol/FM_Milsymbol_Infantry_UI.edds"
+     m_iGroupSize 10
+     m_iRadioFrequency 0
+    }
+    SCR_GroupPreset "{623D22A070A9945F}" {
+     m_sGroupName "3rd Squad"
+     m_sGroupFlag "{AEA07460606095ED}UI/Textures/FieldManual/Gameplay/Navigation/Images/MilitarySymbol/FM_Milsymbol_Infantry_UI.edds"
+     m_iGroupSize 10
+     m_iRadioFrequency 0
+    }
+    SCR_GroupPreset "{623D22A04615D2BA}" {
+     m_sGroupName "4th Squad"
+     m_sGroupFlag "{AEA07460606095ED}UI/Textures/FieldManual/Gameplay/Navigation/Images/MilitarySymbol/FM_Milsymbol_Infantry_UI.edds"
+     m_iGroupSize 10
+     m_iRadioFrequency 0
+    }
+    SCR_GroupPreset "{623D22A05DD7C6CF}" {
+     m_sGroupName "5th Squad"
+     m_sGroupFlag "{AEA07460606095ED}UI/Textures/FieldManual/Gameplay/Navigation/Images/MilitarySymbol/FM_Milsymbol_Infantry_UI.edds"
+     m_iGroupSize 5
+     m_iRadioFrequency 0
+    }
+    SCR_GroupPreset "{623D22A053B6287E}" {
+     m_sGroupName "Armor"
+     m_sGroupFlag "{06707AEC3FB7601A}UI/Textures/FieldManual/Gameplay/Navigation/Images/MilitarySymbol/FM_Milsymbol_Armor_UI.edds"
+     m_iGroupSize 8
+     m_iRadioFrequency 0
+    }
+    SCR_GroupPreset "{623D22A026F83CC2}" {
+     m_sGroupName "Artillery"
+     m_sGroupFlag "{C59704D1F6B9E38B}UI/Textures/FieldManual/Gameplay/Navigation/Images/MilitarySymbol/FM_Milsymbol_Artillery_UI.edds"
+     m_iGroupSize 3
+     m_iRadioFrequency 0
+    }
+    SCR_GroupPreset "{623D22A03C7532BB}" {
+     m_sGroupName "Logistics"
+     m_sGroupFlag "{2A5DB30A28BD26A6}UI/Textures/FieldManual/Gameplay/Navigation/Images/MilitarySymbol/FM_Milsymbol_Maintenance_UI.edds"
+     m_iGroupSize 3
+     m_iRadioFrequency 0
+    }
+   }
+   m_bCreateOnlyPredefinedGroups 1
+   m_sFactionBackground "{F8AC305446D5D480}UI/Textures/DeployMenu/Loadout-BG/Loadout_US_BG.imageset"
+  }
+  SCR_Faction "{56DEAC40D3C2E623}" : "{09727032415AC39B}Configs/Factions/USSR.conf" {
+   UIInfo SCR_FactionUIInfo "{528C96127F8B6B08}" {
+    Name "OCP"
+    Icon "{43532A6DA936D333}Images/OCP.edds"
+    m_sNameUpper "OCP"
+   }
+   m_sFactionFlag "{43532A6DA936D333}Images/OCP.edds"
+   m_CallsignInfo SCR_FactionCallsignInfo "{5DA0F2A67DFB8809}" {
+    m_aSquadNames {
+     SCR_CallsignInfo "{55CCB79287E901BC}" {
+      m_sCallsign "COY"
+     }
+     SCR_CallsignInfo "{55CCB79287936EBD}" {
+      m_sCallsign "1PLT"
+     }
+     SCR_CallsignInfo "{55CCB79287BAFBD6}" {
+      m_sCallsign "1-1"
+     }
+     SCR_CallsignInfo "{55CCB79287A4D7B6}" {
+      m_sCallsign "1-2"
+     }
+     SCR_CallsignInfo "{623D22A3A1FFF3A8}" {
+      m_sCallsign "1-3"
+     }
+     SCR_CallsignInfo "{623D22A3A1B9178C}" {
+      m_sCallsign "1-4"
+     }
+     SCR_CallsignInfo "{623D22A3A07A3D0C}" {
+      m_sCallsign "1-5"
+     }
+     SCR_CallsignInfo "{623D22A3BB223E92}" {
+      m_sCallsign "ARMOR"
+     }
+     SCR_CallsignInfo "{623D22A3BBF18A63}" {
+      m_sCallsign "ARTY"
+     }
+     SCR_CallsignInfo "{623D22A3BBBA7672}" {
+      m_sCallsign "LOGI"
+     }
+    }
+    m_sCallsignGroupFormat "%3"
+   }
+   m_aPredefinedGroups {
+    SCR_GroupPreset "{623D22A38D9314DA}" {
+     m_sGroupName "Company Command"
+     m_sGroupFlag "{AEA07460606095ED}UI/Textures/FieldManual/Gameplay/Navigation/Images/MilitarySymbol/FM_Milsymbol_Infantry_UI.edds"
+     m_iGroupSize 3
+    }
+    SCR_GroupPreset "{623D22A39BDBF50E}" {
+     m_sGroupName "1st Platoon"
+     m_sGroupFlag "{AEA07460606095ED}UI/Textures/FieldManual/Gameplay/Navigation/Images/MilitarySymbol/FM_Milsymbol_Infantry_UI.edds"
+     m_iGroupSize 2
+    }
+    SCR_GroupPreset "{623D22A36EC9062F}" {
+     m_sGroupName "1st Squad"
+     m_sGroupFlag "{AEA07460606095ED}UI/Textures/FieldManual/Gameplay/Navigation/Images/MilitarySymbol/FM_Milsymbol_Infantry_UI.edds"
+     m_iGroupSize 9
+    }
+    SCR_GroupPreset "{623D22A367365890}" {
+     m_sGroupName "2nd Squad"
+     m_sGroupFlag "{AEA07460606095ED}UI/Textures/FieldManual/Gameplay/Navigation/Images/MilitarySymbol/FM_Milsymbol_Infantry_UI.edds"
+     m_iGroupSize 9
+     m_iRadioFrequency 0
+    }
+    SCR_GroupPreset "{623D22A37F4323B7}" {
+     m_sGroupName "3rd Squad"
+     m_sGroupFlag "{AEA07460606095ED}UI/Textures/FieldManual/Gameplay/Navigation/Images/MilitarySymbol/FM_Milsymbol_Infantry_UI.edds"
+     m_iGroupSize 8
+     m_iRadioFrequency 0
+    }
+    SCR_GroupPreset "{623D22A35B83E5C5}" {
+     m_sGroupName "4th Squad"
+     m_sGroupFlag "{AEA07460606095ED}UI/Textures/FieldManual/Gameplay/Navigation/Images/MilitarySymbol/FM_Milsymbol_Infantry_UI.edds"
+     m_iGroupSize 10
+     m_iRadioFrequency 0
+    }
+    SCR_GroupPreset "{623D22A32C6F0010}" {
+     m_sGroupName "5th Squad"
+     m_sGroupFlag "{AEA07460606095ED}UI/Textures/FieldManual/Gameplay/Navigation/Images/MilitarySymbol/FM_Milsymbol_Infantry_UI.edds"
+     m_iGroupSize 9
+     m_iRadioFrequency 0
+    }
+    SCR_GroupPreset "{623D22A33996F272}" {
+     m_sGroupName "Armor"
+     m_sGroupFlag "{06707AEC3FB7601A}UI/Textures/FieldManual/Gameplay/Navigation/Images/MilitarySymbol/FM_Milsymbol_Armor_UI.edds"
+     m_iGroupSize 8
+     m_iRadioFrequency 0
+    }
+    SCR_GroupPreset "{623D22A269BD6914}" {
+     m_sGroupName "Artillery"
+     m_sGroupFlag "{C59704D1F6B9E38B}UI/Textures/FieldManual/Gameplay/Navigation/Images/MilitarySymbol/FM_Milsymbol_Artillery_UI.edds"
+     m_iGroupSize 3
+     m_iRadioFrequency 0
+    }
+    SCR_GroupPreset "{623D22A27DEC347F}" {
+     m_sGroupName "Logistics"
+     m_sGroupFlag "{2A5DB30A28BD26A6}UI/Textures/FieldManual/Gameplay/Navigation/Images/MilitarySymbol/FM_Milsymbol_Maintenance_UI.edds"
+     m_iGroupSize 3
+     m_iRadioFrequency 0
+    }
+   }
+   m_bCreateOnlyPredefinedGroups 1
+   m_sFactionBackground "{21533F2089005056}UI/Textures/DeployMenu/Loadout-BG/Loadout_BG_USSR.imageset"
+  }
+  SCR_Faction "{56DEAC40D132400B}" : "{8053DB656DD18B14}Configs/Factions/FIA.conf" {
+   m_bIsPlayable 0
+   m_sFactionBackground "{81BF3B1DCC106577}UI/Textures/DeployMenu/Loadout-BG/Loadout_BG_FIA.imageset"
+  }
+  SCR_Faction "{607AA5C7A94496DA}" : "{3FA20B01D950D31F}Configs/Factions/CIV.conf" {
+  }
+ }
+}

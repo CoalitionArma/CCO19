@@ -249,8 +249,6 @@ $grp Turret : "{ECDC9FE2503E6152}M119/M119_fieldgun.et" {
  }
 }
 GenericEntity : "{FB18EFE9C1A81E29}Prefabs/Compositions/Slotted/SlotFlatMedium/VehicleMaintenance_M_US_01.et" {
- coords 13713.831 26.096 5645.177
- angleX -0.447
- angleY 0.01
+ coords 13717.752 26.193 5644.608
  angleZ -1.343
 }

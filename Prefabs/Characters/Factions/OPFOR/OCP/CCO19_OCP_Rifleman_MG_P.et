@@ -1,9 +1,7 @@
 SCR_ChimeraCharacter : "{DFD7E6F06242E5B0}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Rifleman_Base_P.et" {
  ID "200D264F0EEA1A28"
  components {
-  PS_PlayableComponent "{5EFCC1946F475F15}" {
-   m_name "Machine Gunner"
-  }
+  
   CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
    WeaponTemplate "{A89BC9D55FFB4CD8}Prefabs/Weapons/MachineGuns/PKM/MG_PKM.et"
   }

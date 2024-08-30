@@ -206,10 +206,6 @@ GenericEntity : "{4093AE33DCEFAD67}Prefabs/Compositions/Slotted/SlotFlatSmall/Su
   }
  }
 }
-GenericEntity : "{4510C273B794F3A9}Prefabs/Compositions/Slotted/SlotFlatMedium/VehicleMaintenance_M_USSR_01.et" {
- coords 13933.219 25.867 14625.575
- angleY -92
-}
 GenericEntity : "{68ED84218EA1BDC3}Prefabs/Compositions/Slotted/SlotFlatSmall/Antenna_S_USSR_01.et" {
  coords 13893.57 25.073 14599.272
  angleY 52

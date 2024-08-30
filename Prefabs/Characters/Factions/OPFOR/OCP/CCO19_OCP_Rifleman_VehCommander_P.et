@@ -12,9 +12,7 @@ SCR_ChimeraCharacter : "{DFD7E6F06242E5B0}Prefabs/Characters/Factions/OPFOR/OCP/
     }
    }
   }
-  PS_PlayableComponent "{5EFCC1946F475F15}" {
-   m_name "Commander/Gunner"
-  }
+  
   CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
    WeaponTemplate "{BFEA719491610A45}Prefabs/Weapons/Rifles/AKS74U/Rifle_AKS74U.et"
   }

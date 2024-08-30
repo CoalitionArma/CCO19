@@ -12,9 +12,7 @@ SCR_ChimeraCharacter : "{DFD7E6F06242E5B0}Prefabs/Characters/Factions/OPFOR/OCP/
     }
    }
   }
-  PS_PlayableComponent "{5EFCC1946F475F15}" {
-   m_name "Marksman"
-  }
+  
   CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
    WeaponTemplate "{6415B7923DE28C1B}Prefabs/Weapons/Rifles/SVD/Rifle_SVD_PSO.et"
   }

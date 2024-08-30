@@ -1,9 +1,7 @@
 SCR_ChimeraCharacter : "{DFD7E6F06242E5B0}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Rifleman_Base_P.et" {
  ID "200D264F0EEA1A28"
  components {
-  PS_PlayableComponent "{5EFCC1946F475F15}" {
-   m_name "Supply Runner"
-  }
+  
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
     LoadoutSlotInfo Back {

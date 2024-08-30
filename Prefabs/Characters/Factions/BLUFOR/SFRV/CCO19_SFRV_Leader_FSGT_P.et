@@ -1,8 +1,6 @@
 SCR_ChimeraCharacter : "{2946C9CC4AAC01A2}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Leader_Base_SL_P.et" {
  ID "52092032B0E62200"
  components {
-  PS_PlayableComponent "{5EFCC1946F475F15}" {
-   m_name "First Sergeant"
-  }
+  
  }
 }

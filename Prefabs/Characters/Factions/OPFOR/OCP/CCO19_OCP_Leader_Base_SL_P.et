@@ -12,9 +12,7 @@ SCR_ChimeraCharacter : "{DFD7E6F06242E5B0}Prefabs/Characters/Factions/OPFOR/OCP/
     }
    }
   }
-  PS_PlayableComponent "{5EFCC1946F475F15}" {
-   m_name "Sergeant"
-  }
+  
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
    m_VariantData SCR_EditableEntityVariantData "{60F6B83ED4C13CC3}" {
     m_bRandomizeDefaultVariant 0

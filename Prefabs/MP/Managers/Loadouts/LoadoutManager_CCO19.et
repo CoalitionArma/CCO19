@@ -1,0 +1,231 @@
+SCR_LoadoutManager {
+ ID "623D1AB94F79EB4C"
+ components {
+  RplComponent "{623D1AB94F79EB55}" {
+   Streamable Disabled
+  }
+ }
+ Flags 0
+ m_aPlayerLoadouts {
+  SCR_FactionPlayerLoadout "{62394A592EACB381}" {
+   m_sLoadoutName "Rifleman"
+   m_sLoadoutResource "{3B5BDB7A523E4810}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_Base_P.et"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{623D22AB7834A5C5}" {
+   m_sLoadoutName "Rifleman (Demo)"
+   m_sLoadoutResource "{E4F5198E83EAADFA}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_Demo_P.et"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{62394A53C18DAC3E}" {
+   m_sLoadoutName "Rifleman (AT)"
+   m_sLoadoutResource "{CDDDA1DE9127AE5B}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_AT_P.et"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{62394A53AE862322}" {
+   m_sLoadoutName "Assistant Automatic Rifleman"
+   m_sLoadoutResource "{48CB0765E07F99FB}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_AAR_P.et"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{62394A53BE0FC182}" {
+   m_sLoadoutName "Automatic Rifleman"
+   m_sLoadoutResource "{700DF359EE3CB245}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_AR_P.et"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{623D22AB19DA2F50}" {
+   m_sLoadoutName "Medic"
+   m_sLoadoutResource "{227B26E0BF7CD3F5}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_Medic_P.et"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{62394A53654EC602}" {
+   m_sLoadoutName "Team Leader"
+   m_sLoadoutResource "{B4CE670379CB41D5}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Leader_TL_P.et"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{62394A53723DA195}" {
+   m_sLoadoutName "Squad Leader"
+   m_sLoadoutResource "{2946C9CC4AAC01A2}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Leader_Base_SL_P.et"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{62394A535D6B3175}" {
+   m_sLoadoutName "Platoon Sergeant"
+   m_sLoadoutResource "{E966FD5B73900110}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Leader_PSGT_P.et"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{62394A532D2330A3}" {
+   m_sLoadoutName "Platoon Leader"
+   m_sLoadoutResource "{6CED074856AC1650}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Leader_PL_P.et"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{623D22AF8DFB3D44}" {
+   m_sLoadoutName "Company Commander"
+   m_sLoadoutResource "{589534EDC46E19F0}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Leader_COY_P.et"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{623D22AAE8ECD217}" {
+   m_sLoadoutName "Medical Officer"
+   m_sLoadoutResource "{CB0040615951F316}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_MO_P.et"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{62394A533858E053}" {
+   m_sLoadoutName "Forward Observer"
+   m_sLoadoutResource "{80D32D80C2A37AF0}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Leader_FO_P.et"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{623D22ABAA923579}" {
+   m_sLoadoutName "Machine Gunner"
+   m_sLoadoutResource "{931A049EE0D98F24}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_MMG_P.et"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{623D22ABBB00F80F}" {
+   m_sLoadoutName "Assistant Machine Gunner"
+   m_sLoadoutResource "{6DCF7D1A0E5566AB}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_AMMG_P.et"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{623D22AB80CDAA33}" {
+   m_sLoadoutName "MAT Gunner"
+   m_sLoadoutResource "{BBA79D98B23826A3}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_MAT_P.et"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{623D22AB6D2723BC}" {
+   m_sLoadoutName "Assistant MAT Gunner"
+   m_sLoadoutResource "{343CE437EE1F39AF}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_MATA_P.et"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{623D22AAD461A5A9}" {
+   m_sLoadoutName "Marksman"
+   m_sLoadoutResource "{37C5E9EC5411E00E}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Marksman_P.et"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{623D22AAFA3E77A8}" {
+   m_sLoadoutName "Armor Commander"
+   m_sLoadoutResource "{237613C534F7EEC0}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_VehicleCommander_P.et"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{623D22AAC2E8CF7F}" {
+   m_sLoadoutName "Armor Crewman"
+   m_sLoadoutResource "{5606DC190F4847CD}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_VehicleDriver_P.et"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{623D22AA890DF8E2}" {
+   m_sLoadoutName "Artillery Commander"
+   m_sLoadoutResource "{B6AEDFD882D71D47}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Leader_BatteryCommander_P.et"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{623D22AA9BA63602}" {
+   m_sLoadoutName "Artillery Gunner"
+   m_sLoadoutResource "{77E27963A6052258}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_BatteryGunner_P.et"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{623D22AA6265A371}" {
+   m_sLoadoutName "Supply Sergeant"
+   m_sLoadoutResource "{064FA95C04B3373F}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Leader_LogiLead_P.et"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{623D22AA71982A47}" {
+   m_sLoadoutName "Supply Runner"
+   m_sLoadoutResource "{F5838A4A846944E4}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_LogiRunner_P.et"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{623D22A82C68A2FB}" {
+   m_sLoadoutName "Rifleman"
+   m_sLoadoutResource "{DFD7E6F06242E5B0}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Rifleman_Base_P.et"
+   m_sAffiliatedFaction "USSR"
+  }
+  SCR_FactionPlayerLoadout "{623D22A830AD9DF8}" {
+   m_sLoadoutName "Machine Gunner"
+   m_sLoadoutResource "{C9FAA83EEC2DFADF}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Rifleman_MG_P.et"
+   m_sAffiliatedFaction "USSR"
+  }
+  SCR_FactionPlayerLoadout "{623D22AFDF630802}" {
+   m_sLoadoutName "Assistant Machine Gunner"
+   m_sLoadoutResource "{9CAA0AABF3598797}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Rifleman_MGA_P.et"
+   m_sAffiliatedFaction "USSR"
+  }
+  SCR_FactionPlayerLoadout "{623D22AFD1578455}" {
+   m_sLoadoutName "Grenadier"
+   m_sLoadoutResource "{E1473138BECC5358}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Rifleman_AT_P.et"
+   m_sAffiliatedFaction "USSR"
+  }
+  SCR_FactionPlayerLoadout "{623D22AFBF446AB9}" {
+   m_sLoadoutName "Assistant Grenadier"
+   m_sLoadoutResource "{7F2F318C2FB6D2F7}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Rifleman_ATA_P.et"
+   m_sAffiliatedFaction "USSR"
+  }
+  SCR_FactionPlayerLoadout "{623D22AF1F34B1D9}" {
+   m_sLoadoutName "Medic"
+   m_sLoadoutResource "{8A0885F59A0B3CF8}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Rifleman_Medic_P.et"
+   m_sAffiliatedFaction "USSR"
+  }
+  SCR_FactionPlayerLoadout "{623D22AF69B2093B}" {
+   m_sLoadoutName "Junior Sergeant"
+   m_sLoadoutResource "{BBBF80CBA20BE7D2}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Leader_TL_P.et"
+   m_sAffiliatedFaction "USSR"
+  }
+  SCR_FactionPlayerLoadout "{623D22AF7A78C578}" {
+   m_sLoadoutName "Sergeant"
+   m_sLoadoutResource "{CBE229F5618CF3C9}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Leader_SSGT_P.et"
+   m_sAffiliatedFaction "USSR"
+  }
+  SCR_FactionPlayerLoadout "{623D22AF4C2B8133}" {
+   m_sLoadoutName "Senior Sergeant"
+   m_sLoadoutResource "{C5FC6DBD5C7BFC13}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Leader_PSGT_P.et"
+   m_sAffiliatedFaction "USSR"
+  }
+  SCR_FactionPlayerLoadout "{623D22AF5DEED3A4}" {
+   m_sLoadoutName "Platoon Commander"
+   m_sLoadoutResource "{639CE0808D6CB057}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Leader_PL_P.et"
+   m_sAffiliatedFaction "USSR"
+  }
+  SCR_FactionPlayerLoadout "{623D22AF2DEDDDDF}" {
+   m_sLoadoutName "Company Commander"
+   m_sLoadoutResource "{353674C5EC317024}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Leader_COY_P.et"
+   m_sAffiliatedFaction "USSR"
+  }
+  SCR_FactionPlayerLoadout "{623D22AF3E1B611B}" {
+   m_sLoadoutName "Medical Officer"
+   m_sLoadoutResource "{E79AD08776BA0E15}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Rifleman_MO_P.et"
+   m_sAffiliatedFaction "USSR"
+  }
+  SCR_FactionPlayerLoadout "{623D22AEE305EC03}" {
+   m_sLoadoutName "Forward Observer"
+   m_sLoadoutResource "{8FA2CA481963DCF7}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Leader_FO_P.et"
+   m_sAffiliatedFaction "USSR"
+  }
+  SCR_FactionPlayerLoadout "{623D22AED3BC96A8}" {
+   m_sLoadoutName "Marksman"
+   m_sLoadoutResource "{C85064EDBA04A51D}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Marksman_P.et"
+   m_sAffiliatedFaction "USSR"
+  }
+  SCR_FactionPlayerLoadout "{623D22AEA06A811C}" {
+   m_sLoadoutName "Armor Commander"
+   m_sLoadoutResource "{7E59682AD03EBA74}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Rifleman_VehCommander_P.et"
+   m_sAffiliatedFaction "USSR"
+  }
+  SCR_FactionPlayerLoadout "{623D22AEB51994F4}" {
+   m_sLoadoutName "Armor Crewman"
+   m_sLoadoutResource "{7C32FA394431E227}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Rifleman_VehDriver_P.et"
+   m_sAffiliatedFaction "USSR"
+  }
+  SCR_FactionPlayerLoadout "{623D22AE8CC33A66}" {
+   m_sLoadoutName "Artillery Commander"
+   m_sLoadoutResource "{E15EC0CCC0EA6865}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Leader_BatterCommander_P.et"
+   m_sAffiliatedFaction "USSR"
+  }
+  SCR_FactionPlayerLoadout "{623D22AE828B688F}" {
+   m_sLoadoutName "Artillery Gunner"
+   m_sLoadoutResource "{0AA23365063F3427}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Rifleman_BatteryGunner_P.et"
+   m_sAffiliatedFaction "USSR"
+  }
+  SCR_FactionPlayerLoadout "{623D22AE72EA8A9F}" {
+   m_sLoadoutName "Supply Sergeant"
+   m_sLoadoutResource "{DD0A64CC33289C92}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Leader_LogiLead_P.et"
+   m_sAffiliatedFaction "USSR"
+  }
+  SCR_FactionPlayerLoadout "{623D22AE47881ECB}" {
+   m_sLoadoutName "Supply Runner"
+   m_sLoadoutResource "{77362FD31442FD4F}Prefabs/Characters/Factions/OPFOR/OCP/CCO19_OCP_Rifleman_LogiRunner_P.et"
+   m_sAffiliatedFaction "USSR"
+  }
+ }
+}

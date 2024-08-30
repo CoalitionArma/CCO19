@@ -1,9 +1,7 @@
 SCR_ChimeraCharacter : "{3B5BDB7A523E4810}Prefabs/Characters/Factions/BLUFOR/SFRV/CCO19_SFRV_Rifleman_Base_P.et" {
  ID "52092032B0E62200"
  components {
-  PS_PlayableComponent "{5EFCC1946F475F15}" {
-   m_name "Marksman"
-  }
+  
   CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
    WeaponTemplate "{81EB948E6414BD6F}Prefabs/Weapons/Rifles/M14/Rifle_M21_ARTII.et"
   }

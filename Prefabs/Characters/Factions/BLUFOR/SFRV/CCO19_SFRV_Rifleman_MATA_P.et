@@ -12,9 +12,7 @@ SCR_ChimeraCharacter : "{3B5BDB7A523E4810}Prefabs/Characters/Factions/BLUFOR/SFR
     }
    }
   }
-  PS_PlayableComponent "{5EFCC1946F475F15}" {
-   m_name "MAT Assistant Gunner"
-  }
+  
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
     LoadoutSlotInfo Back {
